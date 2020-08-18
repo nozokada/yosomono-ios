@@ -7,169 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55D2A097A22026C045965D01 /* Pods_Yosomono_YosomonoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5EFF3A557D5DAA21EFFFBB /* Pods_Yosomono_YosomonoUITests.framework */; };
-		5F0127F06E69364919A3F02C /* Pods_YosomonoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C572A6C073D1D056FE52CF /* Pods_YosomonoTests.framework */; };
-		D415A4C42443C82700C094A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4C32443C82700C094A2 /* AppDelegate.swift */; };
-		D415A4C62443C82700C094A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4C52443C82700C094A2 /* SceneDelegate.swift */; };
-		D415A4C82443C82700C094A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4C72443C82700C094A2 /* FirstViewController.swift */; };
-		D415A4CA2443C82700C094A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4C92443C82700C094A2 /* SecondViewController.swift */; };
-		D415A4CD2443C82700C094A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D415A4CB2443C82700C094A2 /* Main.storyboard */; };
-		D415A4CF2443C82900C094A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D415A4CE2443C82900C094A2 /* Assets.xcassets */; };
-		D415A4D22443C82900C094A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D415A4D02443C82900C094A2 /* LaunchScreen.storyboard */; };
-		D415A4DD2443C82A00C094A2 /* YosomonoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4DC2443C82A00C094A2 /* YosomonoTests.swift */; };
-		D415A4E82443C82A00C094A2 /* YosomonoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415A4E72443C82A00C094A2 /* YosomonoUITests.swift */; };
-		D45D07BE244401520042406E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D45D07BD244401520042406E /* GoogleService-Info.plist */; };
-		F611DEFF7B5E1D87AD2C473B /* Pods_Yosomono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D71C99DC027CB7FF4E01D5 /* Pods_Yosomono.framework */; };
+		01353A6F1CF64DEA27C18925 /* Pods_Yosomono_YosomonoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129F87F2B9F82AF648B2717B /* Pods_Yosomono_YosomonoUITests.framework */; };
+		5E3E0228893F0012CEE36D51 /* Pods_Yosomono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357FB0ABEDC5C338D5CC0746 /* Pods_Yosomono.framework */; };
+		75190BEE11386AFA666077DD /* Pods_YosomonoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */; };
+		CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2224EB897D00EB51F8 /* AppDelegate.swift */; };
+		CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */; };
+		CF927C2724EB897D00EB51F8 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2624EB897D00EB51F8 /* AppRootView.swift */; };
+		CF927C2924EB897E00EB51F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF927C2824EB897E00EB51F8 /* Assets.xcassets */; };
+		CF927C2C24EB897E00EB51F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF927C2B24EB897E00EB51F8 /* Preview Assets.xcassets */; };
+		CF927C2F24EB897E00EB51F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */; };
+		CF927C3A24EB897E00EB51F8 /* YosomonoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C3924EB897E00EB51F8 /* YosomonoTests.swift */; };
+		CF927C4524EB897E00EB51F8 /* YosomonoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C4424EB897E00EB51F8 /* YosomonoUITests.swift */; };
+		CF927C5324EB8FDC00EB51F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D415A4D92443C82A00C094A2 /* PBXContainerItemProxy */ = {
+		CF927C3624EB897E00EB51F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D415A4B82443C82700C094A2 /* Project object */;
+			containerPortal = CF927C1724EB897D00EB51F8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D415A4BF2443C82700C094A2;
+			remoteGlobalIDString = CF927C1E24EB897D00EB51F8;
 			remoteInfo = Yosomono;
 		};
-		D415A4E42443C82A00C094A2 /* PBXContainerItemProxy */ = {
+		CF927C4124EB897E00EB51F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D415A4B82443C82700C094A2 /* Project object */;
+			containerPortal = CF927C1724EB897D00EB51F8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D415A4BF2443C82700C094A2;
+			remoteGlobalIDString = CF927C1E24EB897D00EB51F8;
 			remoteInfo = Yosomono;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06D71C99DC027CB7FF4E01D5 /* Pods_Yosomono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yosomono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10C572A6C073D1D056FE52CF /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28C960711F29BB4CD62F905D /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
-		428D2452DABE948001AAE9A9 /* Pods-Yosomono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono.release.xcconfig"; path = "Target Support Files/Pods-Yosomono/Pods-Yosomono.release.xcconfig"; sourceTree = "<group>"; };
-		45EEC102E715C00337521981 /* Pods-Yosomono-YosomonoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.release.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5C5EFF3A557D5DAA21EFFFBB /* Pods_Yosomono_YosomonoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yosomono_YosomonoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D415A4C02443C82700C094A2 /* Yosomono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yosomono.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D415A4C32443C82700C094A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D415A4C52443C82700C094A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D415A4C72443C82700C094A2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D415A4C92443C82700C094A2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		D415A4CC2443C82700C094A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D415A4CE2443C82900C094A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D415A4D12443C82900C094A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D415A4D32443C82900C094A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D415A4D82443C82A00C094A2 /* YosomonoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YosomonoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D415A4DC2443C82A00C094A2 /* YosomonoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosomonoTests.swift; sourceTree = "<group>"; };
-		D415A4DE2443C82A00C094A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D415A4E32443C82A00C094A2 /* YosomonoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YosomonoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D415A4E72443C82A00C094A2 /* YosomonoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosomonoUITests.swift; sourceTree = "<group>"; };
-		D415A4E92443C82A00C094A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D45D07BD244401520042406E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E0EF6EF42C259A3A65975CBC /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E42391ACFD376D70A901F4B7 /* Pods-YosomonoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.debug.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FB9575C4BD27EF9E67E0503C /* Pods-Yosomono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono/Pods-Yosomono.debug.xcconfig"; sourceTree = "<group>"; };
+		03F8B5133DB143D61FBC3A8C /* Pods-Yosomono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono.release.xcconfig"; path = "Target Support Files/Pods-Yosomono/Pods-Yosomono.release.xcconfig"; sourceTree = "<group>"; };
+		129F87F2B9F82AF648B2717B /* Pods_Yosomono_YosomonoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yosomono_YosomonoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		357FB0ABEDC5C338D5CC0746 /* Pods_Yosomono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yosomono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC78744AF97184334EBB6DD /* Pods-Yosomono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono/Pods-Yosomono.debug.xcconfig"; sourceTree = "<group>"; };
+		90BDAED94BEF8962A4C1934C /* Pods-Yosomono-YosomonoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.release.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9EC9421C635E2CF67E1CA14D /* Pods-YosomonoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.debug.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD67DEAC42BBB33FCE5EEF68 /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF927C1F24EB897D00EB51F8 /* Yosomono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yosomono.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF927C2224EB897D00EB51F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF927C2624EB897D00EB51F8 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		CF927C2824EB897E00EB51F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF927C2B24EB897E00EB51F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF927C2E24EB897E00EB51F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF927C3024EB897E00EB51F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF927C3524EB897E00EB51F8 /* YosomonoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YosomonoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF927C3924EB897E00EB51F8 /* YosomonoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosomonoTests.swift; sourceTree = "<group>"; };
+		CF927C3B24EB897E00EB51F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF927C4024EB897E00EB51F8 /* YosomonoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YosomonoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF927C4424EB897E00EB51F8 /* YosomonoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosomonoUITests.swift; sourceTree = "<group>"; };
+		CF927C4624EB897E00EB51F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D415A4BD2443C82700C094A2 /* Frameworks */ = {
+		CF927C1C24EB897D00EB51F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F611DEFF7B5E1D87AD2C473B /* Pods_Yosomono.framework in Frameworks */,
+				5E3E0228893F0012CEE36D51 /* Pods_Yosomono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4D52443C82A00C094A2 /* Frameworks */ = {
+		CF927C3224EB897E00EB51F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0127F06E69364919A3F02C /* Pods_YosomonoTests.framework in Frameworks */,
+				75190BEE11386AFA666077DD /* Pods_YosomonoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4E02443C82A00C094A2 /* Frameworks */ = {
+		CF927C3D24EB897E00EB51F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D2A097A22026C045965D01 /* Pods_Yosomono_YosomonoUITests.framework in Frameworks */,
+				01353A6F1CF64DEA27C18925 /* Pods_Yosomono_YosomonoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		457F1EE33943AE9A7A72F1B8 /* Pods */ = {
+		98A2C5918E777F851A547AC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB9575C4BD27EF9E67E0503C /* Pods-Yosomono.debug.xcconfig */,
-				428D2452DABE948001AAE9A9 /* Pods-Yosomono.release.xcconfig */,
-				E0EF6EF42C259A3A65975CBC /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */,
-				45EEC102E715C00337521981 /* Pods-Yosomono-YosomonoUITests.release.xcconfig */,
-				E42391ACFD376D70A901F4B7 /* Pods-YosomonoTests.debug.xcconfig */,
-				28C960711F29BB4CD62F905D /* Pods-YosomonoTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		7AED5242F5A57792267FD14D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				06D71C99DC027CB7FF4E01D5 /* Pods_Yosomono.framework */,
-				5C5EFF3A557D5DAA21EFFFBB /* Pods_Yosomono_YosomonoUITests.framework */,
-				10C572A6C073D1D056FE52CF /* Pods_YosomonoTests.framework */,
+				357FB0ABEDC5C338D5CC0746 /* Pods_Yosomono.framework */,
+				129F87F2B9F82AF648B2717B /* Pods_Yosomono_YosomonoUITests.framework */,
+				F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D415A4B72443C82700C094A2 = {
+		B17BC7BFD153A4427D2F4CB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D415A4C22443C82700C094A2 /* Yosomono */,
-				D415A4DB2443C82A00C094A2 /* YosomonoTests */,
-				D415A4E62443C82A00C094A2 /* YosomonoUITests */,
-				D415A4C12443C82700C094A2 /* Products */,
-				457F1EE33943AE9A7A72F1B8 /* Pods */,
-				7AED5242F5A57792267FD14D /* Frameworks */,
+				6DC78744AF97184334EBB6DD /* Pods-Yosomono.debug.xcconfig */,
+				03F8B5133DB143D61FBC3A8C /* Pods-Yosomono.release.xcconfig */,
+				CD67DEAC42BBB33FCE5EEF68 /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */,
+				90BDAED94BEF8962A4C1934C /* Pods-Yosomono-YosomonoUITests.release.xcconfig */,
+				9EC9421C635E2CF67E1CA14D /* Pods-YosomonoTests.debug.xcconfig */,
+				DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF927C1624EB897D00EB51F8 = {
+			isa = PBXGroup;
+			children = (
+				CF927C2124EB897D00EB51F8 /* Yosomono */,
+				CF927C3824EB897E00EB51F8 /* YosomonoTests */,
+				CF927C4324EB897E00EB51F8 /* YosomonoUITests */,
+				CF927C2024EB897D00EB51F8 /* Products */,
+				B17BC7BFD153A4427D2F4CB3 /* Pods */,
+				98A2C5918E777F851A547AC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D415A4C12443C82700C094A2 /* Products */ = {
+		CF927C2024EB897D00EB51F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D415A4C02443C82700C094A2 /* Yosomono.app */,
-				D415A4D82443C82A00C094A2 /* YosomonoTests.xctest */,
-				D415A4E32443C82A00C094A2 /* YosomonoUITests.xctest */,
+				CF927C1F24EB897D00EB51F8 /* Yosomono.app */,
+				CF927C3524EB897E00EB51F8 /* YosomonoTests.xctest */,
+				CF927C4024EB897E00EB51F8 /* YosomonoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D415A4C22443C82700C094A2 /* Yosomono */ = {
+		CF927C2124EB897D00EB51F8 /* Yosomono */ = {
 			isa = PBXGroup;
 			children = (
-				D415A4C32443C82700C094A2 /* AppDelegate.swift */,
-				D415A4C52443C82700C094A2 /* SceneDelegate.swift */,
-				D415A4C72443C82700C094A2 /* FirstViewController.swift */,
-				D415A4C92443C82700C094A2 /* SecondViewController.swift */,
-				D415A4CB2443C82700C094A2 /* Main.storyboard */,
-				D415A4CE2443C82900C094A2 /* Assets.xcassets */,
-				D415A4D02443C82900C094A2 /* LaunchScreen.storyboard */,
-				D415A4D32443C82900C094A2 /* Info.plist */,
-				D45D07BD244401520042406E /* GoogleService-Info.plist */,
+				CF927C2224EB897D00EB51F8 /* AppDelegate.swift */,
+				CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */,
+				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
+				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
+				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
+				CF927C3024EB897E00EB51F8 /* Info.plist */,
+				CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */,
+				CF927C2A24EB897E00EB51F8 /* Preview Content */,
 			);
 			path = Yosomono;
 			sourceTree = "<group>";
 		};
-		D415A4DB2443C82A00C094A2 /* YosomonoTests */ = {
+		CF927C2A24EB897E00EB51F8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D415A4DC2443C82A00C094A2 /* YosomonoTests.swift */,
-				D415A4DE2443C82A00C094A2 /* Info.plist */,
+				CF927C2B24EB897E00EB51F8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF927C3824EB897E00EB51F8 /* YosomonoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF927C3924EB897E00EB51F8 /* YosomonoTests.swift */,
+				CF927C3B24EB897E00EB51F8 /* Info.plist */,
 			);
 			path = YosomonoTests;
 			sourceTree = "<group>";
 		};
-		D415A4E62443C82A00C094A2 /* YosomonoUITests */ = {
+		CF927C4324EB897E00EB51F8 /* YosomonoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D415A4E72443C82A00C094A2 /* YosomonoUITests.swift */,
-				D415A4E92443C82A00C094A2 /* Info.plist */,
+				CF927C4424EB897E00EB51F8 /* YosomonoUITests.swift */,
+				CF927C4624EB897E00EB51F8 /* Info.plist */,
 			);
 			path = YosomonoUITests;
 			sourceTree = "<group>";
@@ -177,15 +182,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D415A4BF2443C82700C094A2 /* Yosomono */ = {
+		CF927C1E24EB897D00EB51F8 /* Yosomono */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D415A4EC2443C82A00C094A2 /* Build configuration list for PBXNativeTarget "Yosomono" */;
+			buildConfigurationList = CF927C4924EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "Yosomono" */;
 			buildPhases = (
-				2CFE48D9AD06C17E4B8F3AB5 /* [CP] Check Pods Manifest.lock */,
-				D415A4BC2443C82700C094A2 /* Sources */,
-				D415A4BD2443C82700C094A2 /* Frameworks */,
-				D415A4BE2443C82700C094A2 /* Resources */,
-				4A468AAC2C9A9AF6D2459E62 /* [CP] Embed Pods Frameworks */,
+				F081D14FF79E807131878CC4 /* [CP] Check Pods Manifest.lock */,
+				CF927C1B24EB897D00EB51F8 /* Sources */,
+				CF927C1C24EB897D00EB51F8 /* Frameworks */,
+				CF927C1D24EB897D00EB51F8 /* Resources */,
+				41A9611A3CE2E5A896BCE955 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,72 +198,72 @@
 			);
 			name = Yosomono;
 			productName = Yosomono;
-			productReference = D415A4C02443C82700C094A2 /* Yosomono.app */;
+			productReference = CF927C1F24EB897D00EB51F8 /* Yosomono.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D415A4D72443C82A00C094A2 /* YosomonoTests */ = {
+		CF927C3424EB897E00EB51F8 /* YosomonoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D415A4EF2443C82A00C094A2 /* Build configuration list for PBXNativeTarget "YosomonoTests" */;
+			buildConfigurationList = CF927C4C24EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "YosomonoTests" */;
 			buildPhases = (
-				B0A9EF6B901AA4984939C0C6 /* [CP] Check Pods Manifest.lock */,
-				D415A4D42443C82A00C094A2 /* Sources */,
-				D415A4D52443C82A00C094A2 /* Frameworks */,
-				D415A4D62443C82A00C094A2 /* Resources */,
+				CC29374FE5191E160B1129B5 /* [CP] Check Pods Manifest.lock */,
+				CF927C3124EB897E00EB51F8 /* Sources */,
+				CF927C3224EB897E00EB51F8 /* Frameworks */,
+				CF927C3324EB897E00EB51F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D415A4DA2443C82A00C094A2 /* PBXTargetDependency */,
+				CF927C3724EB897E00EB51F8 /* PBXTargetDependency */,
 			);
 			name = YosomonoTests;
 			productName = YosomonoTests;
-			productReference = D415A4D82443C82A00C094A2 /* YosomonoTests.xctest */;
+			productReference = CF927C3524EB897E00EB51F8 /* YosomonoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D415A4E22443C82A00C094A2 /* YosomonoUITests */ = {
+		CF927C3F24EB897E00EB51F8 /* YosomonoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D415A4F22443C82A00C094A2 /* Build configuration list for PBXNativeTarget "YosomonoUITests" */;
+			buildConfigurationList = CF927C4F24EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "YosomonoUITests" */;
 			buildPhases = (
-				006958AC54246F07D3FAB580 /* [CP] Check Pods Manifest.lock */,
-				D415A4DF2443C82A00C094A2 /* Sources */,
-				D415A4E02443C82A00C094A2 /* Frameworks */,
-				D415A4E12443C82A00C094A2 /* Resources */,
-				16A4F02400B2E4A9CFB6B279 /* [CP] Embed Pods Frameworks */,
+				0F3D04EB56EB265B29FDA863 /* [CP] Check Pods Manifest.lock */,
+				CF927C3C24EB897E00EB51F8 /* Sources */,
+				CF927C3D24EB897E00EB51F8 /* Frameworks */,
+				CF927C3E24EB897E00EB51F8 /* Resources */,
+				6FF990A3BDBCF7D439545D62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D415A4E52443C82A00C094A2 /* PBXTargetDependency */,
+				CF927C4224EB897E00EB51F8 /* PBXTargetDependency */,
 			);
 			name = YosomonoUITests;
 			productName = YosomonoUITests;
-			productReference = D415A4E32443C82A00C094A2 /* YosomonoUITests.xctest */;
+			productReference = CF927C4024EB897E00EB51F8 /* YosomonoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D415A4B82443C82700C094A2 /* Project object */ = {
+		CF927C1724EB897D00EB51F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = nozokada;
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Nozomi Okada";
 				TargetAttributes = {
-					D415A4BF2443C82700C094A2 = {
-						CreatedOnToolsVersion = 11.3;
+					CF927C1E24EB897D00EB51F8 = {
+						CreatedOnToolsVersion = 11.6;
 					};
-					D415A4D72443C82A00C094A2 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = D415A4BF2443C82700C094A2;
+					CF927C3424EB897E00EB51F8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = CF927C1E24EB897D00EB51F8;
 					};
-					D415A4E22443C82A00C094A2 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = D415A4BF2443C82700C094A2;
+					CF927C3F24EB897E00EB51F8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = CF927C1E24EB897D00EB51F8;
 					};
 				};
 			};
-			buildConfigurationList = D415A4BB2443C82700C094A2 /* Build configuration list for PBXProject "Yosomono" */;
+			buildConfigurationList = CF927C1A24EB897D00EB51F8 /* Build configuration list for PBXProject "Yosomono" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,38 +271,38 @@
 				en,
 				Base,
 			);
-			mainGroup = D415A4B72443C82700C094A2;
-			productRefGroup = D415A4C12443C82700C094A2 /* Products */;
+			mainGroup = CF927C1624EB897D00EB51F8;
+			productRefGroup = CF927C2024EB897D00EB51F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D415A4BF2443C82700C094A2 /* Yosomono */,
-				D415A4D72443C82A00C094A2 /* YosomonoTests */,
-				D415A4E22443C82A00C094A2 /* YosomonoUITests */,
+				CF927C1E24EB897D00EB51F8 /* Yosomono */,
+				CF927C3424EB897E00EB51F8 /* YosomonoTests */,
+				CF927C3F24EB897E00EB51F8 /* YosomonoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D415A4BE2443C82700C094A2 /* Resources */ = {
+		CF927C1D24EB897D00EB51F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D415A4D22443C82900C094A2 /* LaunchScreen.storyboard in Resources */,
-				D45D07BE244401520042406E /* GoogleService-Info.plist in Resources */,
-				D415A4CF2443C82900C094A2 /* Assets.xcassets in Resources */,
-				D415A4CD2443C82700C094A2 /* Main.storyboard in Resources */,
+				CF927C2F24EB897E00EB51F8 /* LaunchScreen.storyboard in Resources */,
+				CF927C5324EB8FDC00EB51F8 /* GoogleService-Info.plist in Resources */,
+				CF927C2C24EB897E00EB51F8 /* Preview Assets.xcassets in Resources */,
+				CF927C2924EB897E00EB51F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4D62443C82A00C094A2 /* Resources */ = {
+		CF927C3324EB897E00EB51F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4E12443C82A00C094A2 /* Resources */ = {
+		CF927C3E24EB897E00EB51F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +312,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		006958AC54246F07D3FAB580 /* [CP] Check Pods Manifest.lock */ = {
+		0F3D04EB56EB265B29FDA863 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,46 +334,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		16A4F02400B2E4A9CFB6B279 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2CFE48D9AD06C17E4B8F3AB5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Yosomono-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A468AAC2C9A9AF6D2459E62 /* [CP] Embed Pods Frameworks */ = {
+		41A9611A3CE2E5A896BCE955 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,7 +351,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yosomono/Pods-Yosomono-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0A9EF6B901AA4984939C0C6 /* [CP] Check Pods Manifest.lock */ = {
+		6FF990A3BDBCF7D439545D62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC29374FE5191E160B1129B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,64 +390,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F081D14FF79E807131878CC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yosomono-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D415A4BC2443C82700C094A2 /* Sources */ = {
+		CF927C1B24EB897D00EB51F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D415A4CA2443C82700C094A2 /* SecondViewController.swift in Sources */,
-				D415A4C82443C82700C094A2 /* FirstViewController.swift in Sources */,
-				D415A4C42443C82700C094A2 /* AppDelegate.swift in Sources */,
-				D415A4C62443C82700C094A2 /* SceneDelegate.swift in Sources */,
+				CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */,
+				CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */,
+				CF927C2724EB897D00EB51F8 /* AppRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4D42443C82A00C094A2 /* Sources */ = {
+		CF927C3124EB897E00EB51F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D415A4DD2443C82A00C094A2 /* YosomonoTests.swift in Sources */,
+				CF927C3A24EB897E00EB51F8 /* YosomonoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D415A4DF2443C82A00C094A2 /* Sources */ = {
+		CF927C3C24EB897E00EB51F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D415A4E82443C82A00C094A2 /* YosomonoUITests.swift in Sources */,
+				CF927C4524EB897E00EB51F8 /* YosomonoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D415A4DA2443C82A00C094A2 /* PBXTargetDependency */ = {
+		CF927C3724EB897E00EB51F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D415A4BF2443C82700C094A2 /* Yosomono */;
-			targetProxy = D415A4D92443C82A00C094A2 /* PBXContainerItemProxy */;
+			target = CF927C1E24EB897D00EB51F8 /* Yosomono */;
+			targetProxy = CF927C3624EB897E00EB51F8 /* PBXContainerItemProxy */;
 		};
-		D415A4E52443C82A00C094A2 /* PBXTargetDependency */ = {
+		CF927C4224EB897E00EB51F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D415A4BF2443C82700C094A2 /* Yosomono */;
-			targetProxy = D415A4E42443C82A00C094A2 /* PBXContainerItemProxy */;
+			target = CF927C1E24EB897D00EB51F8 /* Yosomono */;
+			targetProxy = CF927C4124EB897E00EB51F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D415A4CB2443C82700C094A2 /* Main.storyboard */ = {
+		CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D415A4CC2443C82700C094A2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D415A4D02443C82900C094A2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D415A4D12443C82900C094A2 /* Base */,
+				CF927C2E24EB897E00EB51F8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -472,7 +468,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D415A4EA2443C82A00C094A2 /* Debug */ = {
+		CF927C4724EB897E00EB51F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -522,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -532,7 +528,7 @@
 			};
 			name = Debug;
 		};
-		D415A4EB2443C82A00C094A2 /* Release */ = {
+		CF927C4824EB897E00EB51F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -576,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -586,54 +582,58 @@
 			};
 			name = Release;
 		};
-		D415A4ED2443C82A00C094A2 /* Debug */ = {
+		CF927C4A24EB897E00EB51F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB9575C4BD27EF9E67E0503C /* Pods-Yosomono.debug.xcconfig */;
+			baseConfigurationReference = 6DC78744AF97184334EBB6DD /* Pods-Yosomono.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Yosomono/Preview Content\"";
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Yosomono/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nozokada.Yosomono;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nozokada.yosomono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D415A4EE2443C82A00C094A2 /* Release */ = {
+		CF927C4B24EB897E00EB51F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428D2452DABE948001AAE9A9 /* Pods-Yosomono.release.xcconfig */;
+			baseConfigurationReference = 03F8B5133DB143D61FBC3A8C /* Pods-Yosomono.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Yosomono/Preview Content\"";
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Yosomono/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nozokada.Yosomono;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nozokada.yosomono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		D415A4F02443C82A00C094A2 /* Debug */ = {
+		CF927C4D24EB897E00EB51F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42391ACFD376D70A901F4B7 /* Pods-YosomonoTests.debug.xcconfig */;
+			baseConfigurationReference = 9EC9421C635E2CF67E1CA14D /* Pods-YosomonoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
 				INFOPLIST_FILE = YosomonoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,16 +647,16 @@
 			};
 			name = Debug;
 		};
-		D415A4F12443C82A00C094A2 /* Release */ = {
+		CF927C4E24EB897E00EB51F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28C960711F29BB4CD62F905D /* Pods-YosomonoTests.release.xcconfig */;
+			baseConfigurationReference = DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
 				INFOPLIST_FILE = YosomonoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,9 +670,9 @@
 			};
 			name = Release;
 		};
-		D415A4F32443C82A00C094A2 /* Debug */ = {
+		CF927C5024EB897E00EB51F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0EF6EF42C259A3A65975CBC /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */;
+			baseConfigurationReference = CD67DEAC42BBB33FCE5EEF68 /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -691,9 +691,9 @@
 			};
 			name = Debug;
 		};
-		D415A4F42443C82A00C094A2 /* Release */ = {
+		CF927C5124EB897E00EB51F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45EEC102E715C00337521981 /* Pods-Yosomono-YosomonoUITests.release.xcconfig */;
+			baseConfigurationReference = 90BDAED94BEF8962A4C1934C /* Pods-Yosomono-YosomonoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,43 +715,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D415A4BB2443C82700C094A2 /* Build configuration list for PBXProject "Yosomono" */ = {
+		CF927C1A24EB897D00EB51F8 /* Build configuration list for PBXProject "Yosomono" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D415A4EA2443C82A00C094A2 /* Debug */,
-				D415A4EB2443C82A00C094A2 /* Release */,
+				CF927C4724EB897E00EB51F8 /* Debug */,
+				CF927C4824EB897E00EB51F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D415A4EC2443C82A00C094A2 /* Build configuration list for PBXNativeTarget "Yosomono" */ = {
+		CF927C4924EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "Yosomono" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D415A4ED2443C82A00C094A2 /* Debug */,
-				D415A4EE2443C82A00C094A2 /* Release */,
+				CF927C4A24EB897E00EB51F8 /* Debug */,
+				CF927C4B24EB897E00EB51F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D415A4EF2443C82A00C094A2 /* Build configuration list for PBXNativeTarget "YosomonoTests" */ = {
+		CF927C4C24EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "YosomonoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D415A4F02443C82A00C094A2 /* Debug */,
-				D415A4F12443C82A00C094A2 /* Release */,
+				CF927C4D24EB897E00EB51F8 /* Debug */,
+				CF927C4E24EB897E00EB51F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D415A4F22443C82A00C094A2 /* Build configuration list for PBXNativeTarget "YosomonoUITests" */ = {
+		CF927C4F24EB897E00EB51F8 /* Build configuration list for PBXNativeTarget "YosomonoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D415A4F32443C82A00C094A2 /* Debug */,
-				D415A4F42443C82A00C094A2 /* Release */,
+				CF927C5024EB897E00EB51F8 /* Debug */,
+				CF927C5124EB897E00EB51F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D415A4B82443C82700C094A2 /* Project object */;
+	rootObject = CF927C1724EB897D00EB51F8 /* Project object */;
 }

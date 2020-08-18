@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Yosomono
 //
-//  Created by Nozomi Okada on 4/12/20.
-//  Copyright © 2020 nozokada. All rights reserved.
+//  Created by Nozomi Okada on 8/17/20.
+//  Copyright © 2020 Nozomi Okada. All rights reserved.
 //
 
 import UIKit
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
         FirebaseApp.configure()
         return true
     }
