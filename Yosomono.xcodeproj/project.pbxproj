@@ -19,6 +19,13 @@
 		CF927C3A24EB897E00EB51F8 /* YosomonoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C3924EB897E00EB51F8 /* YosomonoTests.swift */; };
 		CF927C4524EB897E00EB51F8 /* YosomonoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C4424EB897E00EB51F8 /* YosomonoUITests.swift */; };
 		CF927C5324EB8FDC00EB51F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */; };
+		CF927C5524EB998F00EB51F8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5424EB998F00EB51F8 /* ProfileView.swift */; };
+		CF927C5724EB99DA00EB51F8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5624EB99DA00EB51F8 /* LoginView.swift */; };
+		CF927C5924EB9A1700EB51F8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */; };
+		CF927C5B24EB9A4D00EB51F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5A24EB9A4D00EB51F8 /* Constants.swift */; };
+		CF927C5D24EB9AC800EB51F8 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5C24EB9AC800EB51F8 /* AppProtocols.swift */; };
+		CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5E24EC816900EB51F8 /* AppExtensions.swift */; };
+		CF927C6124ED9D0300EB51F8 /* LoginButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6024ED9D0300EB51F8 /* LoginButtonContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,13 @@
 		CF927C4424EB897E00EB51F8 /* YosomonoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosomonoUITests.swift; sourceTree = "<group>"; };
 		CF927C4624EB897E00EB51F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF927C5424EB998F00EB51F8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CF927C5624EB99DA00EB51F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		CF927C5A24EB9A4D00EB51F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CF927C5C24EB9AC800EB51F8 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
+		CF927C5E24EC816900EB51F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		CF927C6024ED9D0300EB51F8 /* LoginButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonContentView.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +157,14 @@
 			children = (
 				CF927C2224EB897D00EB51F8 /* AppDelegate.swift */,
 				CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */,
+				CF927C5C24EB9AC800EB51F8 /* AppProtocols.swift */,
+				CF927C5E24EC816900EB51F8 /* AppExtensions.swift */,
+				CF927C5A24EB9A4D00EB51F8 /* Constants.swift */,
+				CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */,
 				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
+				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
+				CF927C6024ED9D0300EB51F8 /* LoginButtonContentView.swift */,
+				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
@@ -419,8 +440,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,
+				CF927C5524EB998F00EB51F8 /* ProfileView.swift in Sources */,
 				CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */,
 				CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */,
+				CF927C5D24EB9AC800EB51F8 /* AppProtocols.swift in Sources */,
+				CF927C6124ED9D0300EB51F8 /* LoginButtonContentView.swift in Sources */,
+				CF927C5924EB9A1700EB51F8 /* AuthenticationService.swift in Sources */,
+				CF927C5B24EB9A4D00EB51F8 /* Constants.swift in Sources */,
+				CF927C5724EB99DA00EB51F8 /* LoginView.swift in Sources */,
 				CF927C2724EB897D00EB51F8 /* AppRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

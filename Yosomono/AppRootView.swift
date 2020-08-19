@@ -18,7 +18,7 @@ struct AppRootView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "house.fill")
-                        Text("Home")
+                        Text("")
                     }
                 }
                 .tag(0)
@@ -27,7 +27,7 @@ struct AppRootView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "magnifyingglass")
-                        Text("Search")
+                        Text("")
                     }
                 }
                 .tag(1)
@@ -36,16 +36,15 @@ struct AppRootView: View {
             .tabItem {
                 VStack {
                     Image(systemName: "heart.fill")
-                    Text("Saved")
+                    Text("")
                 }
             }
             .tag(2)
-            Text("Profile View")
-            .font(.title)
+            LoginView()
             .tabItem {
                 VStack {
                     Image(systemName: "person.fill")
-                    Text("Profile")
+                    Text("")
                 }
             }
             .tag(3)
@@ -55,6 +54,6 @@ struct AppRootView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppRootView()
+        AppRootView().environmentObject(AuthenticationService())
     }
 }
