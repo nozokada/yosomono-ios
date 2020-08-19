@@ -21,20 +21,27 @@ struct LoginView: View {
             if authenticationService.currentUser != nil {
                 ProfileView()
             } else {
-                VStack(spacing: 20) {
-                    TextField("Eメールアドレス", text: $email)
-                        .padding()
-                        .background(Constants.Colors.textFieldBackground)
-                        .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-                    SecureField("パスワード", text: $password)
-                        .padding()
-                        .background(Constants.Colors.textFieldBackground)
-                        .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-                    Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
-                    Button(action: login) {
-                        LoginButtonContentView()
-                    }
-                }.padding()
+                NavigationView {
+                    VStack(spacing: 20) {
+                        TextField("Eメールアドレス", text: $email)
+                            .padding()
+                            .background(Constants.Colors.textFieldBackground)
+                            .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+                        SecureField("パスワード", text: $password)
+                            .padding()
+                            .background(Constants.Colors.textFieldBackground)
+                            .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+                        Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
+                        Button(action: login) {
+                            LargeButtonContentView(title: "ログイン")
+                        }
+                        NavigationLink(destination: RegisterView()) {
+                            Text("登録")
+                                .font(.headline)
+                                .padding()
+                        }
+                    }.padding()
+                }
             }
         }
     }
@@ -43,10 +50,6 @@ struct LoginView: View {
         authenticationService.signIn(email: email, password: password) { success, message in
             if !success, let message = message {
                 self.message = message
-            }
-            else {
-                self.email = ""
-                self.password = ""
             }
         }
     }

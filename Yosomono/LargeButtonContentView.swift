@@ -1,5 +1,5 @@
 //
-//  LoginButtonContentView.swift
+//  LargeButtonContentView.swift
 //  Yosomono
 //
 //  Created by Nozomi Okada on 8/19/20.
@@ -8,9 +8,12 @@
 
 import SwiftUI
 
-struct LoginButtonContentView: View {
+struct LargeButtonContentView: View {
+    
+    var title: String
+    
     var body: some View {
-        Text("ログイン")
+        Text(title)
             .font(.headline)
             .foregroundColor(.white)
             .padding()
@@ -22,6 +25,6 @@ struct LoginButtonContentView: View {
 
 struct LoginButton_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButtonContentView()
+        LargeButtonContentView(title: "ボタンのタイトル")
     }
 }
