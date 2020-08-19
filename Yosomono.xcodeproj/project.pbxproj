@@ -27,6 +27,7 @@
 		CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5E24EC816900EB51F8 /* AppExtensions.swift */; };
 		CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */; };
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
+		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		CF927C5E24EC816900EB51F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonContentView.swift; sourceTree = "<group>"; };
 		CF927C6224EDD58000EB51F8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,10 +166,11 @@
 				CF927C5A24EB9A4D00EB51F8 /* Constants.swift */,
 				CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */,
 				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
+				CF927C6424EDE32A00EB51F8 /* AccountView.swift */,
 				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
-				CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */,
 				CF927C6224EDD58000EB51F8 /* RegisterView.swift */,
 				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
+				CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */,
 				CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */,
 				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,
 				CF927C5524EB998F00EB51F8 /* ProfileView.swift in Sources */,

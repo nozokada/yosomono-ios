@@ -40,7 +40,7 @@ struct AppRootView: View {
                 }
             }
             .tag(2)
-            LoginView()
+            AccountView()
             .tabItem {
                 VStack {
                     Image(systemName: "person.fill")
