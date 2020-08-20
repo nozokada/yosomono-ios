@@ -13,41 +13,32 @@ struct AppRootView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("Home View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "house.fill")
-                        Text("")
-                    }
-                }
-                .tag(0)
-            Text("Search View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("")
-                    }
-                }
-                .tag(1)
-            Text("Saved View")
-            .font(.title)
-            .tabItem {
-                VStack {
-                    Image(systemName: "heart.fill")
-                    Text("")
-                }
+            Text("Home View").tabItem {
+                Image(systemName: "house.fill")
+                Text("")
+            }
+            .tag(0)
+            Text("Search View").tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("")
+            }
+            .tag(1)
+            Text("Add").tabItem {
+                Image(systemName: "plus.circle.fill")
+                Text("")
             }
             .tag(2)
-            AccountView()
-            .tabItem {
-                VStack {
-                    Image(systemName: "person.fill")
-                    Text("")
-                }
+            Text("Saved View").tabItem {
+                Image(systemName: "heart.fill")
+                Text("")
             }
             .tag(3)
+            AccountView()
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("")
+            }
+            .tag(4)
         }
     }
 }
