@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,9 @@
 		CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */; };
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
 		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
+		CF927C6824EF434C00EB51F8 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CF927C6724EF434C00EB51F8 /* CodeScanner */; };
+		CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6924EF43D100EB51F8 /* ScanView.swift */; };
+		CF927C6C24EF44ED00EB51F8 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,8 @@
 		CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonContentView.swift; sourceTree = "<group>"; };
 		CF927C6224EDD58000EB51F8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CF927C6924EF43D100EB51F8 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF927C6824EF434C00EB51F8 /* CodeScanner in Frameworks */,
 				5E3E0228893F0012CEE36D51 /* Pods_Yosomono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +173,8 @@
 				CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */,
 				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
 				CF927C6424EDE32A00EB51F8 /* AccountView.swift */,
+				CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */,
+				CF927C6924EF43D100EB51F8 /* ScanView.swift */,
 				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
 				CF927C6224EDD58000EB51F8 /* RegisterView.swift */,
 				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
@@ -224,6 +232,9 @@
 			dependencies = (
 			);
 			name = Yosomono;
+			packageProductDependencies = (
+				CF927C6724EF434C00EB51F8 /* CodeScanner */,
+			);
 			productName = Yosomono;
 			productReference = CF927C1F24EB897D00EB51F8 /* Yosomono.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +310,9 @@
 				Base,
 			);
 			mainGroup = CF927C1624EB897D00EB51F8;
+			packageReferences = (
+				CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = CF927C2024EB897D00EB51F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,8 +466,10 @@
 				CF927C5524EB998F00EB51F8 /* ProfileView.swift in Sources */,
 				CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */,
 				CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */,
+				CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */,
 				CF927C5D24EB9AC800EB51F8 /* AppProtocols.swift in Sources */,
 				CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */,
+				CF927C6C24EF44ED00EB51F8 /* AddItemView.swift in Sources */,
 				CF927C5924EB9A1700EB51F8 /* AuthenticationService.swift in Sources */,
 				CF927C5B24EB9A4D00EB51F8 /* Constants.swift in Sources */,
 				CF927C5724EB99DA00EB51F8 /* LoginView.swift in Sources */,
@@ -788,6 +804,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF927C6724EF434C00EB51F8 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF927C1724EB897D00EB51F8 /* Project object */;
 }

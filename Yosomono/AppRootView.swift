@@ -23,7 +23,7 @@ struct AppRootView: View {
                 Text("")
             }
             .tag(1)
-            Text("Add").tabItem {
+            AddItemView().tabItem {
                 Image(systemName: "plus.circle.fill")
                 Text("")
             }
