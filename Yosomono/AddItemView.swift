@@ -23,7 +23,7 @@ struct AddItemView: View {
                 Button(action: {
                     self.isPresentingScanner.toggle()
                 }) {
-                    Image(systemName: "camera")
+                    Image(systemName: "barcode.viewfinder")
                 }.padding()
                 .sheet(isPresented: $isPresentingScanner) {
                     ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode)

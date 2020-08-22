@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,9 +28,9 @@
 		CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */; };
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
 		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
-		CF927C6824EF434C00EB51F8 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CF927C6724EF434C00EB51F8 /* CodeScanner */; };
 		CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6924EF43D100EB51F8 /* ScanView.swift */; };
 		CF927C6C24EF44ED00EB51F8 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */; };
+		CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7024F0981600EB51F8 /* CodeScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +84,7 @@
 		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CF927C6924EF43D100EB51F8 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		CF927C7024F0981600EB51F8 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF927C6824EF434C00EB51F8 /* CodeScanner in Frameworks */,
 				5E3E0228893F0012CEE36D51 /* Pods_Yosomono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +179,7 @@
 				CF927C6224EDD58000EB51F8 /* RegisterView.swift */,
 				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
 				CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */,
+				CF927C7024F0981600EB51F8 /* CodeScanner.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
@@ -233,7 +234,6 @@
 			);
 			name = Yosomono;
 			packageProductDependencies = (
-				CF927C6724EF434C00EB51F8 /* CodeScanner */,
 			);
 			productName = Yosomono;
 			productReference = CF927C1F24EB897D00EB51F8 /* Yosomono.app */;
@@ -311,7 +311,6 @@
 			);
 			mainGroup = CF927C1624EB897D00EB51F8;
 			packageReferences = (
-				CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = CF927C2024EB897D00EB51F8 /* Products */;
 			projectDirPath = "";
@@ -460,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */,
 				CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */,
 				CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */,
 				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,
@@ -804,25 +804,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/CodeScanner";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.6;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CF927C6724EF434C00EB51F8 /* CodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CF927C6624EF434C00EB51F8 /* XCRemoteSwiftPackageReference "CodeScanner" */;
-			productName = CodeScanner;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF927C1724EB897D00EB51F8 /* Project object */;
 }
