@@ -10,6 +10,8 @@
 		01353A6F1CF64DEA27C18925 /* Pods_Yosomono_YosomonoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129F87F2B9F82AF648B2717B /* Pods_Yosomono_YosomonoUITests.framework */; };
 		5E3E0228893F0012CEE36D51 /* Pods_Yosomono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357FB0ABEDC5C338D5CC0746 /* Pods_Yosomono.framework */; };
 		75190BEE11386AFA666077DD /* Pods_YosomonoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */; };
+		CF037E0924F3353300BAB8AE /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037E0824F3353300BAB8AE /* LargeTextField.swift */; };
+		CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */; };
 		CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2224EB897D00EB51F8 /* AppDelegate.swift */; };
 		CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */; };
 		CF927C2724EB897D00EB51F8 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2624EB897D00EB51F8 /* AppRootView.swift */; };
@@ -29,7 +31,7 @@
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
 		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
 		CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6924EF43D100EB51F8 /* ScanView.swift */; };
-		CF927C6C24EF44ED00EB51F8 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */; };
+		CF927C6C24EF44ED00EB51F8 /* ItemUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */; };
 		CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7024F0981600EB51F8 /* CodeScanner.swift */; };
 		CF927C7324F1D6D900EB51F8 /* UPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7224F1D6D900EB51F8 /* UPCService.swift */; };
 		CF927C7524F1DE0D00EB51F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7424F1DE0D00EB51F8 /* Product.swift */; };
@@ -60,6 +62,8 @@
 		90BDAED94BEF8962A4C1934C /* Pods-Yosomono-YosomonoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.release.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EC9421C635E2CF67E1CA14D /* Pods-YosomonoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.debug.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD67DEAC42BBB33FCE5EEF68 /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF037E0824F3353300BAB8AE /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
+		CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSecureField.swift; sourceTree = "<group>"; };
 		CF927C1F24EB897D00EB51F8 /* Yosomono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yosomono.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF927C2224EB897D00EB51F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		CF927C6224EDD58000EB51F8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CF927C6924EF43D100EB51F8 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
-		CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUploadView.swift; sourceTree = "<group>"; };
 		CF927C7024F0981600EB51F8 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		CF927C7224F1D6D900EB51F8 /* UPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCService.swift; sourceTree = "<group>"; };
 		CF927C7424F1DE0D00EB51F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -178,13 +182,15 @@
 				CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */,
 				CF927C7224F1D6D900EB51F8 /* UPCService.swift */,
 				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
+				CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */,
 				CF927C6424EDE32A00EB51F8 /* AccountView.swift */,
-				CF927C6B24EF44ED00EB51F8 /* AddItemView.swift */,
 				CF927C6924EF43D100EB51F8 /* ScanView.swift */,
 				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
 				CF927C6224EDD58000EB51F8 /* RegisterView.swift */,
 				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
 				CF927C6024ED9D0300EB51F8 /* LargeButtonContentView.swift */,
+				CF037E0824F3353300BAB8AE /* LargeTextField.swift */,
+				CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */,
 				CF927C7024F0981600EB51F8 /* CodeScanner.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
@@ -467,6 +473,7 @@
 			files = (
 				CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */,
 				CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */,
+				CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */,
 				CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */,
 				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,
 				CF927C7324F1D6D900EB51F8 /* UPCService.swift in Sources */,
@@ -476,8 +483,9 @@
 				CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */,
 				CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */,
 				CF927C5D24EB9AC800EB51F8 /* AppProtocols.swift in Sources */,
+				CF037E0924F3353300BAB8AE /* LargeTextField.swift in Sources */,
 				CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */,
-				CF927C6C24EF44ED00EB51F8 /* AddItemView.swift in Sources */,
+				CF927C6C24EF44ED00EB51F8 /* ItemUploadView.swift in Sources */,
 				CF927C5924EB9A1700EB51F8 /* AuthenticationService.swift in Sources */,
 				CF927C5B24EB9A4D00EB51F8 /* Constants.swift in Sources */,
 				CF927C5724EB99DA00EB51F8 /* LoginView.swift in Sources */,
@@ -652,6 +660,7 @@
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Yosomono/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,6 +682,7 @@
 				DEVELOPMENT_TEAM = EPF2DMU2WE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Yosomono/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

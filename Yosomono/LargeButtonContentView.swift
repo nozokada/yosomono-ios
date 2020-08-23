@@ -10,6 +10,8 @@ import SwiftUI
 
 struct LargeButtonContentView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var title: String
     
     var body: some View {

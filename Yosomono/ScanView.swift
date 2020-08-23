@@ -30,7 +30,7 @@ struct ScanView: View {
             VStack() {
                 Text("商品のバーコードをスキャンしてください")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(Constants.Colors.themeBlue)
                     .padding()
                     .background(Constants.Colors.textScanBackground)
                     .cornerRadius(Constants.Sizes.textFieldCornerRadius)

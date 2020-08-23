@@ -14,6 +14,7 @@ struct Constants {
     struct Colors {
         static let themeBlue = Color(red: 114.0/255.0, green: 171.0/255.0, blue: 222.0/255.0, opacity: 1.0)
         static let textFieldBackground = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
+        static let textFieldBackgroundDark = Color(red: 41/255.0, green: 42/255.0, blue: 48/255.0, opacity: 1.0)
         static let textScanBackground = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 0.5)
     }
     

@@ -20,27 +20,18 @@ struct RegisterView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            TextField("ユーザー名", text: $username)
-                .padding()
-                .background(Constants.Colors.textFieldBackground)
-                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-            TextField("Eメールアドレス", text: $email)
-                .padding()
-                .background(Constants.Colors.textFieldBackground)
-                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-            SecureField("パスワード", text: $password)
-                .padding()
-                .background(Constants.Colors.textFieldBackground)
-                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-            SecureField("パスワードをもう一度入力", text: $passwordAgain)
-                .padding()
-                .background(Constants.Colors.textFieldBackground)
-                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+            LargeTextField(placeholder: "ユーザー名", text: $username)
+            LargeTextField(placeholder: "Eメールアドレス", text: $email)
+            LargeSecureField(placeholder: "パスワード", text: $password)
+            LargeSecureField(placeholder: "パスワードをもう一度入力", text: $passwordAgain)
+            
             Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
+            
             Button(action: register) {
                 LargeButtonContentView(title: "登録")
             }
-        }.padding()
+        }
+        .padding()
     }
     
     func register() {

@@ -19,15 +19,11 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                TextField("Eメールアドレス", text: $email)
-                    .padding()
-                    .background(Constants.Colors.textFieldBackground)
-                    .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-                SecureField("パスワード", text: $password)
-                    .padding()
-                    .background(Constants.Colors.textFieldBackground)
-                    .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+                LargeTextField(placeholder: "Eメールアドレス", text: $email)
+                LargeSecureField(placeholder: "パスワード", text: $password)
+                
                 Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
+                
                 Button(action: login) {
                     LargeButtonContentView(title: "ログイン")
                 }
@@ -36,7 +32,8 @@ struct LoginView: View {
                         .font(.headline)
                         .padding()
                 }
-            }.padding()
+            }
+            .padding()
         }
     }
     
