@@ -212,6 +212,9 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.2.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -303,12 +306,16 @@ PODS:
   - PromisesObjC (1.2.10)
 
 DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
   - Firebase/Auth
   - Firebase/Firestore
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
+    - AlamofireImage
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAuth
@@ -326,6 +333,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
   FirebaseAuth: 300433de340c1b058dbb8aec224a3f1bcfda5184
@@ -341,6 +350,6 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 67f45dbca0dc622cfb7a1910df557eaa19bae60b
+PODFILE CHECKSUM: 9c7e7c67b11188e7632364dcb65ddaa028982090
 
 COCOAPODS: 1.9.3

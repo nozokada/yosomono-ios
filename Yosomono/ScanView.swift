@@ -12,6 +12,9 @@ struct ScanView: View {
     
     @Binding var isPresented: Bool
     @Binding var scannedCode: String
+    @Binding var productName: String
+    
+    @State var foundProducts: [Product] = []
     
     var body: some View {
         ZStack {
@@ -20,7 +23,7 @@ struct ScanView: View {
                 completion: { result in
                     if case let .success(code) = result {
                         self.scannedCode = code
-                        self.isPresented = false
+                        self.lookupProduct(code)
                     }
                 }
             )
@@ -38,10 +41,20 @@ struct ScanView: View {
             }
         }
     }
+    
+    func lookupProduct(_ code: String) {
+        UPCService().lookup(upc: code) { products in
+            self.foundProducts = products
+            if let product = products.first {
+                self.productName = product.title
+            }
+            self.isPresented = false
+        }
+    }
 }
 
 struct ScanView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanView(isPresented: .constant(true), scannedCode: .constant(""))
+        ScanView(isPresented: .constant(true), scannedCode: .constant(""), productName: .constant(""))
     }
 }

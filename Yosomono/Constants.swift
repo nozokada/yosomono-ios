@@ -30,4 +30,8 @@ struct Constants {
         static let username = "username"
         static let createdAt = "createdAt"
     }
+    
+    struct Api {
+        static let upcitemdb = "https://api.upcitemdb.com/prod/trial"
+    }
 }

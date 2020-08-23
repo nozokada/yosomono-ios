@@ -8,6 +8,8 @@ target 'Yosomono' do
   # Pods for Yosomono
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
   target 'YosomonoTests' do
     inherit! :search_paths

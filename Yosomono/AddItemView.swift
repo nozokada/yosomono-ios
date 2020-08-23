@@ -12,6 +12,7 @@ struct AddItemView: View {
     
     @State var isPresentingScanner = true
     @State var scannedCode: String = ""
+    @State var productName: String = ""
     
     var body: some View {
         VStack(spacing: 20) {
@@ -26,9 +27,13 @@ struct AddItemView: View {
                     Image(systemName: "barcode.viewfinder")
                 }.padding()
                 .sheet(isPresented: $isPresentingScanner) {
-                    ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode)
+                    ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode, productName: self.$productName)
                 }
             }
+            TextField("商品名", text: $productName)
+            .padding()
+            .background(Constants.Colors.textFieldBackground)
+            .cornerRadius(Constants.Sizes.textFieldCornerRadius)
         }.padding()
     }
 }
