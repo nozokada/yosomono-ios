@@ -21,6 +21,7 @@ struct Constants {
     struct Sizes {
         static let buttonCornerRadius: CGFloat = 15.0
         static let textFieldCornerRadius: CGFloat = 5.0
+        static let itemAddButtonSize: CGFloat = 60.0
     }
     
     struct CollectionNames {

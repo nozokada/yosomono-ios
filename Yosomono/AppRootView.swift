@@ -40,34 +40,34 @@ struct AppRootView: View {
                 .tag(3)
             }
         
-            ItemUploadButton(isPresentingAddSheet: $isPresentingAddSheet)
+            ItemAddButton(isPresentingAddSheet: $isPresentingAddSheet)
                 
             .fullScreenCover(isPresented: $isPresentingAddSheet) {
-                ItemUploadView(isPresented: $isPresentingAddSheet)
+                ItemAddView(isPresented: $isPresentingAddSheet)
             }
         }
     }
 }
 
 
-struct ItemUploadButton: View {
+struct ItemAddButton: View {
     
     @Binding var isPresentingAddSheet: Bool
     
     var body: some View {
-        GeometryReader { geometry in
-            Button(action: {
-                self.isPresentingAddSheet.toggle()
-            }) {
-                Image(systemName: "plus.circle")
-                    .resizable()
-                    .foregroundColor(.white)
-                    .background(Constants.Colors.themeBlue)
-                    .cornerRadius(20)
-            }
-            .offset(x: geometry.size.width / 2 - 20, y: geometry.size.height - 46)
-            .frame(width: 40, height: 40)
+        let buttonSize = Constants.Sizes.itemAddButtonSize
+        
+        Button(action: {
+            self.isPresentingAddSheet.toggle()
+        }) {
+            Image(systemName: "plus.circle")
+                .resizable()
         }
+        .foregroundColor(.white)
+        .background(Constants.Colors.themeBlue)
+        .cornerRadius(buttonSize / 2)
+        .frame(width: buttonSize, height: buttonSize)
+        
     }
 }
 

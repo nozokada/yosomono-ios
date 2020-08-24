@@ -31,7 +31,7 @@
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
 		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
 		CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6924EF43D100EB51F8 /* ScanView.swift */; };
-		CF927C6C24EF44ED00EB51F8 /* ItemUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */; };
+		CF927C6C24EF44ED00EB51F8 /* ItemAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* ItemAddView.swift */; };
 		CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7024F0981600EB51F8 /* CodeScanner.swift */; };
 		CF927C7324F1D6D900EB51F8 /* UPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7224F1D6D900EB51F8 /* UPCService.swift */; };
 		CF927C7524F1DE0D00EB51F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7424F1DE0D00EB51F8 /* Product.swift */; };
@@ -89,7 +89,7 @@
 		CF927C6224EDD58000EB51F8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CF927C6924EF43D100EB51F8 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
-		CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUploadView.swift; sourceTree = "<group>"; };
+		CF927C6B24EF44ED00EB51F8 /* ItemAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAddView.swift; sourceTree = "<group>"; };
 		CF927C7024F0981600EB51F8 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		CF927C7224F1D6D900EB51F8 /* UPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCService.swift; sourceTree = "<group>"; };
 		CF927C7424F1DE0D00EB51F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 				CF927C5824EB9A1700EB51F8 /* AuthenticationService.swift */,
 				CF927C7224F1D6D900EB51F8 /* UPCService.swift */,
 				CF927C2624EB897D00EB51F8 /* AppRootView.swift */,
-				CF927C6B24EF44ED00EB51F8 /* ItemUploadView.swift */,
+				CF927C6B24EF44ED00EB51F8 /* ItemAddView.swift */,
 				CF927C6424EDE32A00EB51F8 /* AccountView.swift */,
 				CF927C6924EF43D100EB51F8 /* ScanView.swift */,
 				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
@@ -485,7 +485,7 @@
 				CF927C5D24EB9AC800EB51F8 /* AppProtocols.swift in Sources */,
 				CF037E0924F3353300BAB8AE /* LargeTextField.swift in Sources */,
 				CF927C6124ED9D0300EB51F8 /* LargeButtonContentView.swift in Sources */,
-				CF927C6C24EF44ED00EB51F8 /* ItemUploadView.swift in Sources */,
+				CF927C6C24EF44ED00EB51F8 /* ItemAddView.swift in Sources */,
 				CF927C5924EB9A1700EB51F8 /* AuthenticationService.swift in Sources */,
 				CF927C5B24EB9A4D00EB51F8 /* Constants.swift in Sources */,
 				CF927C5724EB99DA00EB51F8 /* LoginView.swift in Sources */,

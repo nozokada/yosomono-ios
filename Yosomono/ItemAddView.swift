@@ -1,5 +1,5 @@
 //
-//  ItemUploadView.swift
+//  ItemAddView.swift
 //  Yosomono
 //
 //  Created by Nozomi Okada on 8/20/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ItemUploadView: View {
+struct ItemAddView: View {
 
     @Binding var isPresented: Bool
     
@@ -50,6 +50,6 @@ struct ItemUploadView: View {
 
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemUploadView(isPresented: .constant(true))
+        ItemAddView(isPresented: .constant(true))
     }
 }
