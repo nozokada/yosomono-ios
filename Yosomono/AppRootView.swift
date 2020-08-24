@@ -57,17 +57,15 @@ struct ItemAddButton: View {
     var body: some View {
         let buttonSize = Constants.Sizes.itemAddButtonSize
         
-        Button(action: {
-            self.isPresentingAddSheet.toggle()
-        }) {
-            Image(systemName: "plus.circle")
-                .resizable()
-        }
-        .foregroundColor(.white)
-        .background(Constants.Colors.themeBlue)
-        .cornerRadius(buttonSize / 2)
-        .frame(width: buttonSize, height: buttonSize)
-        
+        Image(systemName: "plus.circle")
+            .resizable()
+            .foregroundColor(.white)
+            .background(Constants.Colors.themeBlue)
+            .cornerRadius(buttonSize / 2)
+            .frame(width: buttonSize, height: buttonSize)
+            .onTapGesture {
+                self.isPresentingAddSheet.toggle()
+            }
     }
 }
 
