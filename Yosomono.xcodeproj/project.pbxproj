@@ -36,7 +36,7 @@
 		CF927C7324F1D6D900EB51F8 /* UPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7224F1D6D900EB51F8 /* UPCService.swift */; };
 		CF927C7524F1DE0D00EB51F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7424F1DE0D00EB51F8 /* Product.swift */; };
 		CFCB95D524FC93D800B08BA4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB95D424FC93D800B08BA4 /* CameraView.swift */; };
-		CFCB95D724FC941B00B08BA4 /* ImagePickerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB95D624FC941B00B08BA4 /* ImagePickerCamera.swift */; };
+		CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,7 @@
 		CF927C7224F1D6D900EB51F8 /* UPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCService.swift; sourceTree = "<group>"; };
 		CF927C7424F1DE0D00EB51F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CFCB95D424FC93D800B08BA4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		CFCB95D624FC941B00B08BA4 /* ImagePickerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCamera.swift; sourceTree = "<group>"; };
+		CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YosomonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,7 +197,7 @@
 				CF037E0824F3353300BAB8AE /* LargeTextField.swift */,
 				CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */,
 				CF927C7024F0981600EB51F8 /* CodeScanner.swift */,
-				CFCB95D624FC941B00B08BA4 /* ImagePickerCamera.swift */,
+				CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
@@ -480,7 +480,7 @@
 				CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */,
 				CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */,
 				CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */,
-				CFCB95D724FC941B00B08BA4 /* ImagePickerCamera.swift in Sources */,
+				CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */,
 				CFCB95D524FC93D800B08BA4 /* CameraView.swift in Sources */,
 				CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */,
 				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,

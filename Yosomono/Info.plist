@@ -21,7 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>商品のバーコードを読み取るために必要です</string>
+	<string>商品を撮影したり、バーコードを読み取るために必要です</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>端末内に保存された画像を使用するために必要です</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

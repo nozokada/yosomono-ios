@@ -14,7 +14,7 @@ struct CameraView: View {
     @Binding var image: UIImage?
     
     var body: some View {
-        ImagePickerCamera()
+        ImagePicker()
     }
 }
 

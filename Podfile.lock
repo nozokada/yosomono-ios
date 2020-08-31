@@ -297,6 +297,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.4.0)
+  - ImagePicker (3.2.0)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
@@ -310,6 +311,7 @@ DEPENDENCIES:
   - AlamofireImage
   - Firebase/Auth
   - Firebase/Firestore
+  - ImagePicker
 
 SPEC REPOS:
   trunk:
@@ -327,6 +329,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - ImagePicker
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -346,10 +349,11 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 9c7e7c67b11188e7632364dcb65ddaa028982090
+PODFILE CHECKSUM: 03d1d4d6564cc14480176720598f5acc52527f9b
 
 COCOAPODS: 1.9.3

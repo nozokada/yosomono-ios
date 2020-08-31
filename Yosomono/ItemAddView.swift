@@ -77,7 +77,7 @@ struct UploadImage: View {
                 }
             }
         }
-        .sheet(isPresented: $isPresentingCamera) {
+        .fullScreenCover(isPresented: $isPresentingCamera) {
             CameraView(isPresented: self.$isPresentingCamera, image: self.$productImage)
         }
     }

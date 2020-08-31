@@ -10,6 +10,7 @@ target 'Yosomono' do
   pod 'Firebase/Firestore'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'ImagePicker'
 
   target 'YosomonoTests' do
     inherit! :search_paths
