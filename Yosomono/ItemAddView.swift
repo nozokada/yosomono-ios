@@ -36,7 +36,9 @@ struct ItemAddView: View {
                 }
                 .padding()
             }
-            LargeTextField(placeholder: "商品", text: $productName)
+            LargeTextField(placeholder: "商品名", text: $productName)
+                            
+            UploadImage()
             
             Spacer()
             
@@ -45,6 +47,39 @@ struct ItemAddView: View {
             }
         }
         .padding()
+    }
+}
+
+struct UploadImage: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var isPresentingCamera = false
+    @State var productImage: UIImage? = nil
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(colorScheme == .dark
+                                ? Constants.Colors.textFieldBackgroundDark
+                                : Constants.Colors.textFieldBackground)
+                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+            Group {
+                if productImage != nil {
+                    
+                } else {
+                    Button(action: {
+                        self.isPresentingCamera.toggle()
+                    }) {
+                        Text("商品の画像を撮影または選択する")
+                    }
+                }
+            }
+        }
+        .sheet(isPresented: $isPresentingCamera) {
+            CameraView(isPresented: self.$isPresentingCamera, image: self.$productImage)
+        }
     }
 }
 
