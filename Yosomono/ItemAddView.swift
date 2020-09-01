@@ -15,6 +15,7 @@ struct ItemAddView: View {
     @State var isPresentingScanner = true
     @State var scannedCode: String = ""
     @State var productName: String = ""
+    @State var productImages: [UIImage]? = nil
     @State var retailerName: String = ""
     
     var body: some View {
@@ -39,7 +40,7 @@ struct ItemAddView: View {
             }
             LargeTextField(placeholder: "商品名", text: $productName)
                             
-            SelectedImagesView()
+            SelectedImagesView(images: $productImages)
             
             LargeTextField(placeholder: "小売店名", text: $retailerName)
             
@@ -67,8 +68,9 @@ struct SelectedImagesView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    @Binding var images: [UIImage]?
+    
     @State var isPresentingCamera = false
-    @State var productImages: [UIImage]? = nil
     
     let rows = [
         GridItem(.fixed(180))
@@ -85,7 +87,7 @@ struct SelectedImagesView: View {
                     .cornerRadius(Constants.Sizes.textFieldCornerRadius)
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: rows, spacing: 20) {
-                        ForEach(productImages ?? [UIImage](), id: \.self) { item in
+                        ForEach(images ?? [UIImage](), id: \.self) { item in
                             Image(uiImage: item)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -98,13 +100,13 @@ struct SelectedImagesView: View {
             Button(action: {
                 self.isPresentingCamera.toggle()
             }) {
-                Text("商品の画像を撮影または選択する（\(productImages?.count ?? 0)枚選択中）")
+                Text("商品の画像を撮影または選択する（\(images?.count ?? 0)枚選択中）")
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
             }
         }
         .fullScreenCover(isPresented: $isPresentingCamera) {
-            CameraView(images: self.$productImages, isPresented: self.$isPresentingCamera)
+            CameraView(images: self.$images, isPresented: self.$isPresentingCamera)
         }
     }
 }
@@ -112,6 +114,6 @@ struct SelectedImagesView: View {
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
         ItemAddView(isPresented: .constant(true))
-        SelectedImagesView(isPresentingCamera: false, productImages: [UIImage(named: "ramen")!])
+        SelectedImagesView(images: .constant([UIImage(named: "ramen")!]))
     }
 }
