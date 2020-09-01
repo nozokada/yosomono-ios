@@ -11,6 +11,9 @@ import ImagePicker
 
 struct ImagePicker: UIViewControllerRepresentable {
     
+    @Binding var images: [UIImage]?
+    @Binding var isPresented: Bool
+    
     typealias UIViewControllerType = ImagePickerController
     typealias Coordinator = ImagePickerCoordinator
     
@@ -23,26 +26,32 @@ struct ImagePicker: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: ImagePickerController, context: Context) {
     }
     
-    public func makeCoordinator() -> ImagePickerCoordinator {
-        return ImagePickerCoordinator()
-    }
-}
-
-class ImagePickerCoordinator: NSObject, ImagePickerDelegate {
-    
-    override init() {
-        
+    func makeCoordinator() -> ImagePickerCoordinator {
+        return ImagePickerCoordinator(parent: self)
     }
     
-    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+    class ImagePickerCoordinator: NSObject, ImagePickerDelegate {
         
-    }
-    
-    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        var parent: ImagePicker
         
-    }
-    
-    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        init(parent: ImagePicker) {
+            self.parent = parent
+        }
         
+        func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+            parent.images = images
+            print("wrapperDidPress")
+        }
+        
+        func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+            parent.images = images
+            parent.isPresented = false
+            print("doneButtonDidPress")
+        }
+        
+        func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+            parent.isPresented = false
+            print("cancelButtonDidPress")
+        }
     }
 }

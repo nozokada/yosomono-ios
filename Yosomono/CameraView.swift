@@ -10,16 +10,16 @@ import SwiftUI
 
 struct CameraView: View {
     
+    @Binding var images: [UIImage]?
     @Binding var isPresented: Bool
-    @Binding var image: UIImage?
     
     var body: some View {
-        ImagePicker()
+        ImagePicker(images: $images, isPresented: $isPresented)
     }
 }
 
 struct CameraView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView(isPresented: .constant(true), image: .constant(nil))
+        CameraView(images: .constant(nil), isPresented: .constant(true))
     }
 }

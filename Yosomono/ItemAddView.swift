@@ -15,6 +15,7 @@ struct ItemAddView: View {
     @State var isPresentingScanner = true
     @State var scannedCode: String = ""
     @State var productName: String = ""
+    @State var retailerName: String = ""
     
     var body: some View {
         VStack(spacing: 20) {
@@ -38,7 +39,15 @@ struct ItemAddView: View {
             }
             LargeTextField(placeholder: "商品名", text: $productName)
                             
-            UploadImage()
+            SelectedImagesView()
+            
+            LargeTextField(placeholder: "小売店名", text: $retailerName)
+            
+            LargeTextField(placeholder: "コメント", text: $retailerName)
+            
+            Button(action: submit) {
+                LargeButtonContentView(title: "投稿")
+            }
             
             Spacer()
             
@@ -48,37 +57,54 @@ struct ItemAddView: View {
         }
         .padding()
     }
+    
+    func submit() {
+        print("submit")
+    }
 }
 
-struct UploadImage: View {
+struct SelectedImagesView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
     @State var isPresentingCamera = false
-    @State var productImage: UIImage? = nil
+    @State var productImages: [UIImage]? = nil
+    
+    let rows = [
+        GridItem(.fixed(180))
+    ]
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(colorScheme == .dark
-                                ? Constants.Colors.textFieldBackgroundDark
-                                : Constants.Colors.textFieldBackground)
-                .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-            Group {
-                if productImage != nil {
-                    
-                } else {
-                    Button(action: {
-                        self.isPresentingCamera.toggle()
-                    }) {
-                        Text("商品の画像を撮影または選択する")
+        VStack {
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .frame(height: 200)
+                    .foregroundColor(colorScheme == .dark
+                                    ? Constants.Colors.textFieldBackgroundDark
+                                    : Constants.Colors.textFieldBackground)
+                    .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+                ScrollView(.horizontal) {
+                    LazyHGrid(rows: rows, spacing: 20) {
+                        ForEach(productImages ?? [UIImage](), id: \.self) { item in
+                            Image(uiImage: item)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
                     }
+                    .padding()
                 }
+                .frame(height: 200)
+            }
+            Button(action: {
+                self.isPresentingCamera.toggle()
+            }) {
+                Text("商品の画像を撮影または選択する（\(productImages?.count ?? 0)枚選択中）")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
             }
         }
         .fullScreenCover(isPresented: $isPresentingCamera) {
-            CameraView(isPresented: self.$isPresentingCamera, image: self.$productImage)
+            CameraView(images: self.$productImages, isPresented: self.$isPresentingCamera)
         }
     }
 }
@@ -86,5 +112,6 @@ struct UploadImage: View {
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
         ItemAddView(isPresented: .constant(true))
+        SelectedImagesView(isPresentingCamera: false, productImages: [UIImage(named: "ramen")!])
     }
 }
