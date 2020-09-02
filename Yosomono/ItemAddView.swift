@@ -19,44 +19,46 @@ struct ItemAddView: View {
     @State var retailerName: String = ""
     
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Button(action: {
-                    self.isPresented.toggle()
-                }) {
-                    Image(systemName: "xmark")
+        ScrollView {
+            VStack(spacing: 20) {
+                HStack {
+                    Button(action: {
+                        self.isPresented.toggle()
+                    }) {
+                        Image(systemName: "xmark")
+                    }
+                    Spacer()
                 }
+                
+                HStack {
+                    LargeTextField(placeholder: "バーコード", text: $scannedCode)
+                    Button(action: {
+                        self.isPresentingScanner.toggle()
+                    }) {
+                        Image(systemName: "barcode.viewfinder")
+                    }
+                    .padding()
+                }
+                LargeTextField(placeholder: "商品名", text: $productName)
+                                
+                SelectedImagesView(images: $productImages)
+                
+                SelectTagListView(tags: Constants.retailers)
+                
+                LargeTextField(placeholder: "コメント", text: $retailerName)
+                
+                Button(action: submit) {
+                    LargeButtonContentView(title: "投稿")
+                }
+                
                 Spacer()
-            }
-            
-            HStack {
-                LargeTextField(placeholder: "バーコード", text: $scannedCode)
-                Button(action: {
-                    self.isPresentingScanner.toggle()
-                }) {
-                    Image(systemName: "barcode.viewfinder")
+                
+                .sheet(isPresented: $isPresentingScanner) {
+                    ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode, productName: self.$productName)
                 }
-                .padding()
             }
-            LargeTextField(placeholder: "商品名", text: $productName)
-                            
-            SelectedImagesView(images: $productImages)
-            
-            LargeTextField(placeholder: "小売店名", text: $retailerName)
-            
-            LargeTextField(placeholder: "コメント", text: $retailerName)
-            
-            Button(action: submit) {
-                LargeButtonContentView(title: "投稿")
-            }
-            
-            Spacer()
-            
-            .sheet(isPresented: $isPresentingScanner) {
-                ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode, productName: self.$productName)
-            }
+            .padding()
         }
-        .padding()
     }
     
     func submit() {

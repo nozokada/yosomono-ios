@@ -36,4 +36,6 @@ struct Constants {
     struct Api {
         static let upcitemdb = "https://api.upcitemdb.com/prod/trial"
     }
+    
+    static let retailers = ["Walmart", "Amazon", "Kroger", "Costco", "Walgreens", "Home Depot", "CVS", "Target", "Lowes", "Albertsons", "Others"]
 }
