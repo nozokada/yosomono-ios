@@ -12,6 +12,7 @@
 		75190BEE11386AFA666077DD /* Pods_YosomonoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F755F0E01CEA2B288BC331 /* Pods_YosomonoTests.framework */; };
 		CF037E0924F3353300BAB8AE /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037E0824F3353300BAB8AE /* LargeTextField.swift */; };
 		CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */; };
+		CF4AE2A025000E4000477E01 /* SelectTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4AE29F25000E4000477E01 /* SelectTagListView.swift */; };
 		CF927C2324EB897D00EB51F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2224EB897D00EB51F8 /* AppDelegate.swift */; };
 		CF927C2524EB897D00EB51F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */; };
 		CF927C2724EB897D00EB51F8 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C2624EB897D00EB51F8 /* AppRootView.swift */; };
@@ -66,6 +67,7 @@
 		CD67DEAC42BBB33FCE5EEF68 /* Pods-Yosomono-YosomonoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yosomono-YosomonoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yosomono-YosomonoUITests/Pods-Yosomono-YosomonoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF037E0824F3353300BAB8AE /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSecureField.swift; sourceTree = "<group>"; };
+		CF4AE29F25000E4000477E01 /* SelectTagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTagListView.swift; sourceTree = "<group>"; };
 		CF927C1F24EB897D00EB51F8 /* Yosomono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yosomono.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF927C2224EB897D00EB51F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF927C2424EB897D00EB51F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				CF037E0A24F3371200BAB8AE /* LargeSecureField.swift */,
 				CF927C7024F0981600EB51F8 /* CodeScanner.swift */,
 				CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */,
+				CF4AE29F25000E4000477E01 /* SelectTagListView.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
@@ -483,6 +486,7 @@
 				CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */,
 				CFCB95D524FC93D800B08BA4 /* CameraView.swift in Sources */,
 				CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */,
+				CF4AE2A025000E4000477E01 /* SelectTagListView.swift in Sources */,
 				CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */,
 				CF927C7324F1D6D900EB51F8 /* UPCService.swift in Sources */,
 				CF927C7524F1DE0D00EB51F8 /* Product.swift in Sources */,

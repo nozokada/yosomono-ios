@@ -18,7 +18,7 @@ struct ScanView: View {
     
     var body: some View {
         ZStack {
-            CodeScannerView(
+            CodeScanner(
                 codeTypes: [.upce, .ean8, .ean13],
                 completion: { result in
                     if case let .success(code) = result {

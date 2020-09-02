@@ -29,29 +29,29 @@ struct ImagePicker: UIViewControllerRepresentable {
     func makeCoordinator() -> ImagePickerCoordinator {
         return ImagePickerCoordinator(parent: self)
     }
+}
+
+class ImagePickerCoordinator: NSObject, ImagePickerDelegate {
     
-    class ImagePickerCoordinator: NSObject, ImagePickerDelegate {
-        
-        var parent: ImagePicker
-        
-        init(parent: ImagePicker) {
-            self.parent = parent
-        }
-        
-        func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-            parent.images = images
-            print("wrapperDidPress")
-        }
-        
-        func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-            parent.images = images
-            parent.isPresented = false
-            print("doneButtonDidPress")
-        }
-        
-        func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
-            parent.isPresented = false
-            print("cancelButtonDidPress")
-        }
+    var parent: ImagePicker
+    
+    init(parent: ImagePicker) {
+        self.parent = parent
+    }
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        parent.images = images
+        print("wrapperDidPress")
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        parent.images = images
+        parent.isPresented = false
+        print("doneButtonDidPress")
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        parent.isPresented = false
+        print("cancelButtonDidPress")
     }
 }

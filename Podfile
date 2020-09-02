@@ -11,6 +11,7 @@ target 'Yosomono' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'ImagePicker'
+  pod 'TagListView'
 
   target 'YosomonoTests' do
     inherit! :search_paths

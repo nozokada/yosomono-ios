@@ -1,5 +1,5 @@
 //
-//  CodeScannerView.swift
+//  CodeScanner.swift
 //
 //  Created by Paul Hudson on 10/12/2019.
 //  Copyright © 2019 Paul Hudson. All rights reserved.
@@ -12,16 +12,16 @@ import SwiftUI
 /// To use, set `codeTypes` to be an array of things to scan for, e.g. `[.qr]`, and set `completion` to
 /// a closure that will be called when scanning has finished. This will be sent the string that was detected or a `ScanError`.
 /// For testing inside the simulator, set the `simulatedData` property to some test data you want to send back.
-public struct CodeScannerView: UIViewControllerRepresentable {
+public struct CodeScanner: UIViewControllerRepresentable {
     public enum ScanError: Error {
         case badInput, badOutput
     }
 
     public class ScannerCoordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
-        var parent: CodeScannerView
+        var parent: CodeScanner
         var codeFound = false
 
-        init(parent: CodeScannerView) {
+        init(parent: CodeScanner) {
             self.parent = parent
         }
 
@@ -246,7 +246,7 @@ public struct CodeScannerView: UIViewControllerRepresentable {
 
 struct CodeScannerView_Previews: PreviewProvider {
     static var previews: some View {
-        CodeScannerView(codeTypes: [.qr]) { result in
+        CodeScanner(codeTypes: [.qr]) { result in
             // do nothing
         }
     }
