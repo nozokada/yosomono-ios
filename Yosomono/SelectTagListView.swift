@@ -13,6 +13,8 @@ struct SelectTagListView: UIViewRepresentable {
     
     var tags: [String]
     var fontSize: CGFloat = 12
+    
+    @Binding var selectedTags: Set<String>
 
     func makeUIView(context: Context) -> TagListView {
         let tagListView = TagListView()
@@ -22,6 +24,7 @@ struct SelectTagListView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: TagListView, context: Context) {
+        initView(view: uiView)
     }
     
     func makeCoordinator() -> SelectTagListViewCoordinator {
@@ -29,7 +32,13 @@ struct SelectTagListView: UIViewRepresentable {
     }
     
     fileprivate func initView(view: TagListView) {
-        view.addTags(tags)
+        view.removeAllTags()
+        tags.forEach() { tag in
+            let tagView = view.addTag(tag)
+            if selectedTags.contains(tag) {
+                tagView.isSelected = true
+            }
+        }
         view.textFont = UIFont.systemFont(ofSize: fontSize)
         view.textColor = UIColor(Constants.Colors.themeBlue)
         view.selectedTextColor = .white
@@ -54,15 +63,18 @@ class SelectTagListViewCoordinator: TagListViewDelegate {
     }
     
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
-        #if DEBUG
-        print("Tag pressed: \(title), \(sender)")
-        #endif
         tagView.isSelected = !tagView.isSelected
+        
+        if tagView.isSelected {
+            parent.selectedTags.insert(title)
+        } else {
+            parent.selectedTags.remove(title)
+        }
     }
 }
 
 struct SelectTagListView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectTagListView(tags: ["Welcome", "to", "TagListView"])
+        SelectTagListView(tags: ["Welcome", "to", "TagListView"], selectedTags: .constant(["Welcome"]))
     }
 }

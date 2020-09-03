@@ -37,5 +37,66 @@ struct Constants {
         static let upcitemdb = "https://api.upcitemdb.com/prod/trial"
     }
     
-    static let retailers = ["Walmart", "Amazon", "Kroger", "Costco", "Walgreens", "Home Depot", "CVS", "Target", "Lowes", "Albertsons", "Others"]
+    struct RetailerNames {
+        static let major = ["Albertsons", "Amazon", "Costco", "Kroger", "Target", "Walmart"]
+        
+        static let all = [
+//            Albertsons LLC
+            "Safeway",
+            "Albertsons",
+            "Vons",
+            "Jewel-Osco",
+            "Acme Markets",
+            "Shaw's",
+            "Andronico's",
+            "Carrs",
+            "Haggen",
+            "Lucky",
+            "Pavillions",
+            "Randalls",
+            "Star Market",
+            "Tom Thumb",
+            "United Supermarkets",
+            
+//            Amazon
+            "Amazon",
+            
+//            Ahold Delhaize
+            "Food Lion",
+            "Stop & Shop",
+            "Giant Food Stores",
+            "Hannaford",
+            "Giant Food",
+            
+//            Costco
+            "Costco",
+            
+//            Kroger
+            "Kroger",
+            "Harris Teeter",
+            "King Soopers",
+            "Roundy's",
+            "Smith's Food and Drug",
+            "Fred Meyer",
+            "QFC",
+            "Ruler Foods",
+            "Food 4 Less",
+            "City Market",
+            "Baker's",
+            "Dillons",
+            "Fry's",
+            "Gerbes",
+            "JayC Food Stores",
+            "Mariano's Fresh Market",
+            "Owen's",
+            "Pay Less Super Markets",
+            "Ralphs",
+            
+//            Target
+            "Target",
+            
+//            Walmart
+            "Walmart",
+        ]
+    }
 }

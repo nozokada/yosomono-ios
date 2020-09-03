@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CameraView: View {
     
-    @Binding var images: [UIImage]?
+    @Binding var images: [UIImage]
     @Binding var isPresented: Bool
     
     var body: some View {
@@ -20,6 +20,6 @@ struct CameraView: View {
 
 struct CameraView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView(images: .constant(nil), isPresented: .constant(true))
+        CameraView(images: .constant([UIImage]()), isPresented: .constant(true))
     }
 }

@@ -11,7 +11,7 @@ import ImagePicker
 
 struct ImagePicker: UIViewControllerRepresentable {
     
-    @Binding var images: [UIImage]?
+    @Binding var images: [UIImage]
     @Binding var isPresented: Bool
     
     typealias UIViewControllerType = ImagePickerController

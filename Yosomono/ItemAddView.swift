@@ -9,14 +9,19 @@
 import SwiftUI
 
 struct ItemAddView: View {
+    @Environment(\.colorScheme) var colorScheme
 
     @Binding var isPresented: Bool
     
     @State var isPresentingScanner = true
-    @State var scannedCode: String = ""
-    @State var productName: String = ""
-    @State var productImages: [UIImage]? = nil
-    @State var retailerName: String = ""
+    @State var scannedCode = ""
+    @State var productName = ""
+    @State var productImages = [UIImage]()
+    @State var retailerName = ""
+    @State var selectedRetailerNames = Set<String>()
+    @State var comment = ""
+    
+    
     
     var body: some View {
         ScrollView {
@@ -40,12 +45,15 @@ struct ItemAddView: View {
                     .padding()
                 }
                 LargeTextField(placeholder: "商品名", text: $productName)
-                                
+                
                 SelectedImagesView(images: $productImages)
                 
-                SelectTagListView(tags: Constants.retailers)
+                VStack {
+                    LargeTextField(placeholder: "小売業者を検索", text: $retailerName)
+                    SelectTagListView(tags: filterRetailerNames(name: retailerName), selectedTags: $selectedRetailerNames)
+                }
                 
-                LargeTextField(placeholder: "コメント", text: $retailerName)
+                LargeTextField(placeholder: "コメント", text: $comment)
                 
                 Button(action: submit) {
                     LargeButtonContentView(title: "投稿")
@@ -61,6 +69,18 @@ struct ItemAddView: View {
         }
     }
     
+    func filterRetailerNames(name: String) -> [String] {
+        if name.isEmpty {
+            return Constants.RetailerNames.major
+        }
+        
+        let lowercasedName = name.lowercased()
+        return Constants.RetailerNames.all.filter {
+            $0.lowercased().contains(lowercasedName)
+        }
+        .sorted()
+    }
+    
     func submit() {
         print("submit")
     }
@@ -70,7 +90,7 @@ struct SelectedImagesView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @Binding var images: [UIImage]?
+    @Binding var images: [UIImage]
     
     @State var isPresentingCamera = false
     
@@ -89,7 +109,7 @@ struct SelectedImagesView: View {
                     .cornerRadius(Constants.Sizes.textFieldCornerRadius)
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: rows, spacing: 20) {
-                        ForEach(images ?? [UIImage](), id: \.self) { item in
+                        ForEach(images, id: \.self) { item in
                             Image(uiImage: item)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -102,7 +122,7 @@ struct SelectedImagesView: View {
             Button(action: {
                 self.isPresentingCamera.toggle()
             }) {
-                Text("商品の画像を撮影または選択する（\(images?.count ?? 0)枚選択中）")
+                Text("商品の画像を撮影または選択する（\(images.count)枚選択中）")
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
             }
