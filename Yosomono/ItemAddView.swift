@@ -21,8 +21,6 @@ struct ItemAddView: View {
     @State var selectedRetailerNames = Set<String>()
     @State var comment = ""
     
-    
-    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -50,7 +48,8 @@ struct ItemAddView: View {
                 
                 VStack {
                     LargeTextField(placeholder: "小売業者を検索", text: $retailerName)
-                    SelectTagListView(tags: filterRetailerNames(name: retailerName), selectedTags: $selectedRetailerNames)
+                    SelectTagListView(tags: filterRetailerNames(name: retailerName),
+                                      selectedTags: $selectedRetailerNames)
                 }
                 
                 LargeTextField(placeholder: "コメント", text: $comment)
@@ -78,7 +77,6 @@ struct ItemAddView: View {
         return Constants.RetailerNames.all.filter {
             $0.lowercased().contains(lowercasedName)
         }
-        .sorted()
     }
     
     func submit() {
@@ -100,25 +98,17 @@ struct SelectedImagesView: View {
     
     var body: some View {
         VStack {
-            ZStack(alignment: .leading) {
-                Rectangle()
-                    .frame(height: 200)
-                    .foregroundColor(colorScheme == .dark
-                                    ? Constants.Colors.textFieldBackgroundDark
-                                    : Constants.Colors.textFieldBackground)
-                    .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-                ScrollView(.horizontal) {
-                    LazyHGrid(rows: rows, spacing: 20) {
-                        ForEach(images, id: \.self) { item in
-                            Image(uiImage: item)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: rows, spacing: 20) {
+                    ForEach(images, id: \.self) { item in
+                        Image(uiImage: item)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }
-                    .padding()
                 }
-                .frame(height: 200)
+                .padding()
             }
+            .frame(height: 200)
             Button(action: {
                 self.isPresentingCamera.toggle()
             }) {
@@ -126,7 +116,13 @@ struct SelectedImagesView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
             }
+            .padding(.bottom)
         }
+        .background(colorScheme == .dark
+                        ? Constants.Colors.textFieldBackgroundDark
+                        : Constants.Colors.textFieldBackground)
+        .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+        
         .fullScreenCover(isPresented: $isPresentingCamera) {
             CameraView(images: self.$images, isPresented: self.$isPresentingCamera)
         }

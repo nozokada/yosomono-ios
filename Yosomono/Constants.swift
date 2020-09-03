@@ -98,5 +98,6 @@ struct Constants {
 //            Walmart
             "Walmart",
         ]
+        .sorted()
     }
 }
