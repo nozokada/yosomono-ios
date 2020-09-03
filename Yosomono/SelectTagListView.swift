@@ -12,7 +12,7 @@ import TagListView
 struct SelectTagListView: UIViewRepresentable {
     
     var tags: [String]
-    var fontSize: CGFloat = 12
+    var fontSize: CGFloat = 16
     
     @Binding var selectedTags: Set<String>
 
@@ -23,15 +23,7 @@ struct SelectTagListView: UIViewRepresentable {
         return tagListView
     }
     
-    func updateUIView(_ uiView: TagListView, context: Context) {
-        initView(view: uiView)
-    }
-    
-    func makeCoordinator() -> SelectTagListViewCoordinator {
-        return SelectTagListViewCoordinator(parent: self)
-    }
-    
-    fileprivate func initView(view: TagListView) {
+    func updateUIView(_ view: TagListView, context: Context) {
         view.removeAllTags()
         tags.forEach() { tag in
             let tagView = view.addTag(tag)
@@ -39,6 +31,13 @@ struct SelectTagListView: UIViewRepresentable {
                 tagView.isSelected = true
             }
         }
+    }
+    
+    func makeCoordinator() -> SelectTagListViewCoordinator {
+        return SelectTagListViewCoordinator(parent: self)
+    }
+    
+    fileprivate func initView(view: TagListView) {
         view.textFont = UIFont.systemFont(ofSize: fontSize)
         view.textColor = UIColor(Constants.Colors.themeBlue)
         view.selectedTextColor = .white
@@ -47,10 +46,10 @@ struct SelectTagListView: UIViewRepresentable {
         view.cornerRadius = fontSize
         view.borderWidth = 1
         view.borderColor = UIColor(Constants.Colors.themeBlue)
-        view.paddingX = 8
-        view.paddingY = 8
-        view.marginX = 8
-        view.marginY = 8
+        view.paddingX = fontSize / 2
+        view.paddingY = fontSize / 2
+        view.marginX = fontSize / 2
+        view.marginY = fontSize / 2
     }
 }
 

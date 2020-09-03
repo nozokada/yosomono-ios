@@ -93,7 +93,7 @@ struct SelectedImagesView: View {
     @State var isPresentingCamera = false
     
     let rows = [
-        GridItem(.fixed(180))
+        GridItem(.fixed(100))
     ]
     
     var body: some View {
@@ -108,7 +108,7 @@ struct SelectedImagesView: View {
                 }
                 .padding()
             }
-            .frame(height: 200)
+            .frame(height: 120)
             Button(action: {
                 self.isPresentingCamera.toggle()
             }) {
