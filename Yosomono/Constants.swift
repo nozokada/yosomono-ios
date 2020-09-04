@@ -26,11 +26,16 @@ struct Constants {
     
     struct CollectionNames {
         static let users = "users"
+        static let products = "products"
     }
     
     struct FieldNames {
         static let username = "username"
         static let createdAt = "createdAt"
+        static let upc = "upc"
+        static let ean = "ean"
+        static let title = "title"
+        static let brand = "brand"
     }
     
     struct Api {

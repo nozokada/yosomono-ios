@@ -14,8 +14,7 @@ struct ItemAddView: View {
     @Binding var isPresented: Bool
     
     @State var isPresentingScanner = true
-    @State var scannedCode = ""
-    @State var productName = ""
+    @State var product: Product = Product()
     @State var productImages = [UIImage]()
     @State var retailerName = ""
     @State var selectedRetailerNames = Set<String>()
@@ -34,7 +33,7 @@ struct ItemAddView: View {
                 }
                 
                 HStack {
-                    LargeTextField(placeholder: "バーコード", text: $scannedCode)
+                    LargeTextField(placeholder: "バーコード", text: $product.upc)
                     Button(action: {
                         self.isPresentingScanner.toggle()
                     }) {
@@ -42,7 +41,7 @@ struct ItemAddView: View {
                     }
                     .padding()
                 }
-                LargeTextField(placeholder: "商品名", text: $productName)
+                LargeTextField(placeholder: "商品名", text: $product.title)
                 
                 SelectedImagesView(images: $productImages)
                 
@@ -61,7 +60,7 @@ struct ItemAddView: View {
                 Spacer()
                 
                 .sheet(isPresented: $isPresentingScanner) {
-                    ScanView(isPresented: self.$isPresentingScanner, scannedCode: self.$scannedCode, productName: self.$productName)
+                    ScanView(isPresented: self.$isPresentingScanner, product: self.$product)
                 }
             }
             .padding()

@@ -19,6 +19,13 @@ struct Product {
 
 extension Product {
     
+    init() {
+        ean = ""
+        upc = ""
+        title = ""
+        brand = ""
+    }
+    
     init?(json: [String: Any]) {
         guard let ean = json["ean"] as? String,
             let upc = json["upc"] as? String,

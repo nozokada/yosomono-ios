@@ -11,8 +11,7 @@ import SwiftUI
 struct ScanView: View {
     
     @Binding var isPresented: Bool
-    @Binding var scannedCode: String
-    @Binding var productName: String
+    @Binding var product: Product
     
     @State var foundProducts: [Product] = []
     
@@ -22,7 +21,6 @@ struct ScanView: View {
                 codeTypes: [.upce, .ean8, .ean13],
                 completion: { result in
                     if case let .success(code) = result {
-                        self.scannedCode = code
                         self.lookupProduct(code)
                     }
                 }
@@ -46,7 +44,7 @@ struct ScanView: View {
         UPCService().lookup(upc: code) { products in
             self.foundProducts = products
             if let product = products.first {
-                self.productName = product.title
+                self.product = product
             }
             self.isPresented = false
         }
@@ -55,6 +53,6 @@ struct ScanView: View {
 
 struct ScanView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanView(isPresented: .constant(true), scannedCode: .constant(""), productName: .constant(""))
+        ScanView(isPresented: .constant(true), product: .constant(Product()))
     }
 }
