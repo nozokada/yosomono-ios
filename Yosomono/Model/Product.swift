@@ -8,22 +8,14 @@
 
 import Foundation
 
-struct Product {
+class Product {
     
-    var ean: String
-    var upc: String
-    var title: String
-    var brand: String
-    
-}
-
-extension Product {
+    var ean = ""
+    var upc = ""
+    var title = ""
+    var brand = ""
     
     init() {
-        ean = ""
-        upc = ""
-        title = ""
-        brand = ""
     }
     
     init?(json: [String: Any]) {

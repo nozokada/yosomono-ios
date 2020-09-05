@@ -11,10 +11,10 @@ import Alamofire
 
 class UPCService {
     
-    func lookup(upc: String, completion: @escaping ([Product]) -> ()) {
-        let requestUrl = "\(Constants.Api.upcitemdb)/lookup?upc=\(upc)"
+    func lookup(code: String, completion: @escaping ([Product]) -> ()) {
+        let requestUrl = "\(Constants.Api.upcitemdb)/lookup?upc=\(code)"
         #if DEBUG
-        print("Looking up given UPC \(upc)")
+        print("Looking up product with code \(code)")
         #endif
         AF.request(requestUrl).responseJSON {response in
             completion(self.handleLookupResponse(response))
@@ -26,7 +26,7 @@ class UPCService {
         switch response.result {
         case .success(let json):
             #if DEBUG
-            print("Received JSON response: ", json)
+            print("Received JSON response\n", json)
             #endif
             guard let json = json as? [String: Any],
                 let items = json["items"] as? [[String: Any]] else {
@@ -39,7 +39,7 @@ class UPCService {
             }
         case .failure( _):
             #if DEBUG
-            print("Failed to look up given UPC", response)
+            print("Failed to look up product", response)
             #endif
         }
         return products

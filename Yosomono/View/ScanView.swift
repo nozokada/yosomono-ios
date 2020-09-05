@@ -18,7 +18,7 @@ struct ScanView: View {
     var body: some View {
         ZStack {
             CodeScanner(
-                codeTypes: [.upce, .ean8, .ean13],
+                codeTypes: [.upce, .ean13, .ean8],
                 completion: { result in
                     if case let .success(code) = result {
                         self.lookupProduct(code)
@@ -41,7 +41,7 @@ struct ScanView: View {
     }
     
     func lookupProduct(_ code: String) {
-        UPCService().lookup(upc: code) { products in
+        UPCService().lookup(code: code) { products in
             self.foundProducts = products
             if let product = products.first {
                 self.product = product

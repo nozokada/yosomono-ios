@@ -21,7 +21,7 @@ class AuthenticationService: ObservableObject {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             guard let user = authResult?.user else {
                 #if DEBUG
-                print("User creation for \(email) was failed")
+                print("Failed to create user with email \(email)")
                 #endif
                 if let error = error {
                     completion(false, self.getAuthErrorMessage(error))
@@ -29,7 +29,7 @@ class AuthenticationService: ObservableObject {
                 return
             }
             #if DEBUG
-            print("User creation for \(email) was successful")
+            print("Successfully created user with email \(email)")
             #endif
             self.changeDisplayName(user: user, username: username) {
                 self.createUserData(user: user) {
@@ -44,12 +44,12 @@ class AuthenticationService: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 #if DEBUG
-                print("Sign in failed")
+                print("Failed to sign in")
                 #endif
                 completion(false, self.getAuthErrorMessage(error))
             } else {
                 #if DEBUG
-                print("Sign in succeeded")
+                print("Successfully signed in")
                 #endif
                 self.currentUser = Auth.auth().currentUser
                 completion(true, nil)
@@ -72,12 +72,12 @@ class AuthenticationService: ObservableObject {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 #if DEBUG
-                print("Password reset email was not sent to \(email)")
+                print("Failed to send password reset email to \(email)")
                 #endif
                 completion(false, self.getAuthErrorMessage(error))
             } else {
                 #if DEBUG
-                print("Password reset email was successfully sent to \(email)")
+                print("Successfully sent password reset email to \(email)")
                 #endif
                 completion(true, nil)
             }
@@ -90,11 +90,11 @@ class AuthenticationService: ObservableObject {
         changeRequest.commitChanges() { error in
             if let error = error {
                 #if DEBUG
-                print("Display name \(username) was not added: \(error.localizedDescription)")
+                print("Failed to add display name \(username): \(error.localizedDescription)")
                 #endif
             }
             #if DEBUG
-            print("Display name \(username) was successfully added")
+            print("Successfully added display name \(username)")
             #endif
             completion?()
         }
@@ -108,12 +108,12 @@ class AuthenticationService: ObservableObject {
         ]) { error in
             if let error = error {
                 #if DEBUG
-                print("User data for \(username) was not added: \(error.localizedDescription)")
+                print("Failed to add user data for \(username): \(error.localizedDescription)")
                 #endif
                 return
             }
             #if DEBUG
-            print("User data for \(username) was successfully added")
+            print("Successfully added user data for \(username)")
             #endif
             completion?()
         }
