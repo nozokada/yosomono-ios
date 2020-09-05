@@ -18,6 +18,7 @@ struct ItemAddView: View {
     @State var productImages = [UIImage]()
     @State var retailerName = ""
     @State var selectedRetailerNames = Set<String>()
+    @State var isTagListViewLoaded = false
     @State var comment = ""
     
     var body: some View {
@@ -48,7 +49,8 @@ struct ItemAddView: View {
                 VStack {
                     LargeTextField(placeholder: "小売業者を検索", text: $retailerName)
                     SelectTagListView(tags: filterRetailerNames(name: retailerName),
-                                      selectedTags: $selectedRetailerNames)
+                                      selectedTags: $selectedRetailerNames,
+                                      isLoaded: $isTagListViewLoaded)
                 }
                 
                 LargeTextField(placeholder: "コメント", text: $comment)

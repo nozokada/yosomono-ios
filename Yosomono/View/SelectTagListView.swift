@@ -15,6 +15,7 @@ struct SelectTagListView: UIViewRepresentable {
     var fontSize: CGFloat = 16
     
     @Binding var selectedTags: Set<String>
+    @Binding var isLoaded: Bool
 
     func makeUIView(context: Context) -> TagListView {
         let tagListView = TagListView()
@@ -50,6 +51,10 @@ struct SelectTagListView: UIViewRepresentable {
         view.paddingY = fontSize / 2
         view.marginX = fontSize / 2
         view.marginY = fontSize / 2
+        
+        DispatchQueue.main.async {
+            isLoaded = true
+        }
     }
 }
 
@@ -74,6 +79,6 @@ class SelectTagListViewCoordinator: TagListViewDelegate {
 
 struct SelectTagListView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectTagListView(tags: ["Welcome", "to", "TagListView"], selectedTags: .constant(["Welcome"]))
+        SelectTagListView(tags: ["Welcome", "to", "TagListView"], selectedTags: .constant(["Welcome"]), isLoaded: .constant(false))
     }
 }
