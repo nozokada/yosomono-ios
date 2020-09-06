@@ -25,10 +25,10 @@ struct SelectableTagListView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: TagListView, context: Context) {
+        view.removeAllTags()
         if searchTerm.isEmpty {
             return
         }
-        view.removeAllTags()
         let lowercasedSearchTerm = searchTerm.lowercased()
         tags.forEach() { tag in
             if tag.lowercased().contains(lowercasedSearchTerm) {
