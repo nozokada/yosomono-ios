@@ -18,7 +18,7 @@ struct ProfileView: View {
                 .font(.headline)
                 .padding()
             Button(action: logout) {
-                LargeButtonContentView(title: "ログアウト")
+                ButtonContentView(title: "ログアウト")
             }
         }.padding()
     }

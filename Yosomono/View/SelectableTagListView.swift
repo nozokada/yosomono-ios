@@ -1,5 +1,5 @@
 //
-//  SelectTagListView.swift
+//  SelectableTagListView.swift
 //  Yosomono
 //
 //  Created by Nozomi Okada on 9/2/20.
@@ -9,13 +9,13 @@
 import SwiftUI
 import TagListView
 
-struct SelectTagListView: UIViewRepresentable {
-    
-    var tags: [String]
-    var fontSize: CGFloat = 16
+struct SelectableTagListView: UIViewRepresentable {
     
     @Binding var selectedTags: Set<String>
-    @Binding var isLoaded: Bool
+    
+    var tags: [String]
+    var searchTerm: String = ""
+    var fontSize: CGFloat = 16
 
     func makeUIView(context: Context) -> TagListView {
         let tagListView = TagListView()
@@ -27,15 +27,17 @@ struct SelectTagListView: UIViewRepresentable {
     func updateUIView(_ view: TagListView, context: Context) {
         view.removeAllTags()
         tags.forEach() { tag in
-            let tagView = view.addTag(tag)
-            if selectedTags.contains(tag) {
-                tagView.isSelected = true
+            if tag.lowercased().contains(searchTerm.lowercased()) {
+                let tagView = view.addTag(tag)
+                if selectedTags.contains(tag) {
+                    tagView.isSelected = true
+                }
             }
         }
     }
     
-    func makeCoordinator() -> SelectTagListViewCoordinator {
-        return SelectTagListViewCoordinator(parent: self)
+    func makeCoordinator() -> SelectableTagListViewCoordinator {
+        return SelectableTagListViewCoordinator(parent: self)
     }
     
     fileprivate func initView(view: TagListView) {
@@ -51,18 +53,14 @@ struct SelectTagListView: UIViewRepresentable {
         view.paddingY = fontSize / 2
         view.marginX = fontSize / 2
         view.marginY = fontSize / 2
-        
-        DispatchQueue.main.async {
-            isLoaded = true
-        }
     }
 }
 
-class SelectTagListViewCoordinator: TagListViewDelegate {
+class SelectableTagListViewCoordinator: TagListViewDelegate {
     
-    var parent: SelectTagListView
+    var parent: SelectableTagListView
     
-    init(parent: SelectTagListView) {
+    init(parent: SelectableTagListView) {
         self.parent = parent
     }
     
@@ -79,6 +77,6 @@ class SelectTagListViewCoordinator: TagListViewDelegate {
 
 struct SelectTagListView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectTagListView(tags: ["Welcome", "to", "TagListView"], selectedTags: .constant(["Welcome"]), isLoaded: .constant(false))
+        SelectableTagListView(selectedTags: .constant(["Selectable"]), tags: ["Welcome", "to", "Selectable", "TagListView"])
     }
 }

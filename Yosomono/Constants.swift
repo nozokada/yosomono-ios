@@ -43,8 +43,6 @@ struct Constants {
     }
     
     struct RetailerNames {
-        static let major = ["Albertsons", "Amazon", "Costco", "Kroger", "Target", "Walmart"]
-        
         static let all = [
 //            Albertsons LLC
             "Safeway",

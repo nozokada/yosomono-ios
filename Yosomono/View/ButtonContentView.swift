@@ -1,5 +1,5 @@
 //
-//  LargeButtonContentView.swift
+//  ButtonContentView.swift
 //  Yosomono
 //
 //  Created by Nozomi Okada on 8/19/20.
@@ -8,25 +8,30 @@
 
 import SwiftUI
 
-struct LargeButtonContentView: View {
+struct ButtonContentView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
     var title: String
+    var width: CGFloat = 220
+    var height: CGFloat = 60
+    var font: Font = .headline
     
     var body: some View {
         Text(title)
-            .font(.headline)
+            .font(font)
             .foregroundColor(.white)
             .padding()
-            .frame(width: 220, height: 60)
+            .frame(width: width, height: height)
             .background(Constants.Colors.themeBlue)
             .cornerRadius(Constants.Sizes.buttonCornerRadius)
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
     }
 }
 
 struct LoginButton_Previews: PreviewProvider {
     static var previews: some View {
-        LargeButtonContentView(title: "ボタンのタイトル")
+        ButtonContentView(title: "ボタンのタイトル")
     }
 }

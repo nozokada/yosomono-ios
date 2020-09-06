@@ -25,7 +25,7 @@ struct LoginView: View {
                 Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
                 
                 Button(action: login) {
-                    LargeButtonContentView(title: "ログイン")
+                    ButtonContentView(title: "ログイン")
                 }
                 NavigationLink(destination: RegisterView()) {
                     Text("登録")

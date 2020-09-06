@@ -28,7 +28,7 @@ struct RegisterView: View {
             Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
             
             Button(action: register) {
-                LargeButtonContentView(title: "登録")
+                ButtonContentView(title: "登録")
             }
         }
         .padding()
