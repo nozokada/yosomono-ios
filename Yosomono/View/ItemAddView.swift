@@ -13,19 +13,19 @@ struct ItemAddView: View {
 
     @Binding var isPresented: Bool
     
-    @State var isPresentingScanner = true
     @State var product: Product = Product()
     @State var productImages = [UIImage]()
-    @State var selectedRetailerNames = Set<String>()
-    @State var isPresentingRetailersSelectView = false
     @State var comment = ""
+    @State var selectedRetailerNames = Set<String>()
+    @State var isPresentingScannerView = true
+    @State var isPresentingRetailersSelectView = false
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
                 HStack {
                     Button(action: {
-                        self.isPresented.toggle()
+                        self.isPresentingScannerView.toggle()
                     }) {
                         Image(systemName: "xmark")
                     }
@@ -35,11 +35,14 @@ struct ItemAddView: View {
                 HStack {
                     LargeTextField(placeholder: "バーコード", text: $product.upc)
                     Button(action: {
-                        self.isPresentingScanner.toggle()
+                        self.isPresentingScannerView.toggle()
                     }) {
                         Image(systemName: "barcode.viewfinder")
                     }
                     .padding()
+                    .sheet(isPresented: $isPresentingScannerView) {
+                        ScanView(isPresented: self.$isPresentingScannerView, product: self.$product)
+                    }
                 }
                 LargeTextField(placeholder: "商品名", text: $product.title)
                 
@@ -51,6 +54,10 @@ struct ItemAddView: View {
                     }) {
                         ButtonContentView(title: "+ 小売業者を追加", width: 180, height: 40, font: .body)
                     }
+                    .sheet(isPresented: $isPresentingRetailersSelectView) {
+                        RetailersSelectView(isPresented: self.$isPresentingRetailersSelectView,
+                                            selectedRetailerNames: self.$selectedRetailerNames)
+                    }
                     RemovableTagListView(tags: $selectedRetailerNames)
                 }
                 
@@ -59,16 +66,7 @@ struct ItemAddView: View {
                 Button(action: submit) {
                     ButtonContentView(title: "投稿")
                 }
-                
                 Spacer()
-                
-                .sheet(isPresented: $isPresentingScanner) {
-                    ScanView(isPresented: self.$isPresentingScanner, product: self.$product)
-                }
-                .sheet(isPresented: $isPresentingRetailersSelectView) {
-                    RetailersSelectView(isPresented: self.$isPresentingRetailersSelectView,
-                                        selectedRetailerNames: self.$selectedRetailerNames)
-                }
             }
             .padding()
         }
