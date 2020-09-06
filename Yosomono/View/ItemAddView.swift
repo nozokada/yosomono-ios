@@ -22,16 +22,17 @@ struct ItemAddView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                HStack {
-                    Button(action: {
-                        self.isPresented.toggle()
-                    }) {
-                        Image(systemName: "xmark")
-                    }
-                    Spacer()
+            HStack {
+                Button(action: {
+                    self.isPresented.toggle()
+                }) {
+                    Image(systemName: "xmark")
                 }
-                
+                Spacer()
+            }
+            .padding()
+            
+            VStack(spacing: 10) {
                 HStack {
                     LargeTextField(placeholder: "バーコード", text: $product.upc)
                     Button(action: {
@@ -44,10 +45,11 @@ struct ItemAddView: View {
                         ScanView(isPresented: self.$isPresentingScannerView, product: self.$product)
                     }
                 }
+                Divider()
                 LargeTextField(placeholder: "商品名", text: $product.title)
-                
+                Divider()
                 SelectedImagesView(images: $productImages)
-                
+                Divider()
                 VStack(alignment: .leading) {
                     Button(action: {
                         self.isPresentingRetailersSelectView.toggle()
@@ -60,13 +62,13 @@ struct ItemAddView: View {
                     }
                     RemovableTagListView(tags: $selectedRetailerNames)
                 }
-                
+                Divider()
                 LargeTextField(placeholder: "コメント", text: $comment)
                 
                 Button(action: submit) {
                     ButtonContentView(title: "投稿")
                 }
-                Spacer()
+                .padding()
             }
             .padding()
         }
