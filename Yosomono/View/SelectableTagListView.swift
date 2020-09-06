@@ -14,7 +14,7 @@ struct SelectableTagListView: UIViewRepresentable {
     @Binding var selectedTags: Set<String>
     
     var tags: [String]
-    var searchTerm: String = ""
+    var searchTerm = ""
     var fontSize: CGFloat = 16
 
     func makeUIView(context: Context) -> TagListView {
@@ -25,9 +25,13 @@ struct SelectableTagListView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: TagListView, context: Context) {
+        if searchTerm.isEmpty {
+            return
+        }
         view.removeAllTags()
+        let lowercasedSearchTerm = searchTerm.lowercased()
         tags.forEach() { tag in
-            if tag.lowercased().contains(searchTerm.lowercased()) {
+            if tag.lowercased().contains(lowercasedSearchTerm) {
                 let tagView = view.addTag(tag)
                 if selectedTags.contains(tag) {
                     tagView.isSelected = true
