@@ -25,7 +25,7 @@ struct ItemAddView: View {
             VStack(spacing: 20) {
                 HStack {
                     Button(action: {
-                        self.isPresentingScannerView.toggle()
+                        self.isPresented.toggle()
                     }) {
                         Image(systemName: "xmark")
                     }
