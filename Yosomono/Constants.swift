@@ -32,10 +32,16 @@ struct Constants {
     struct FieldNames {
         static let username = "username"
         static let createdAt = "createdAt"
+        static let updatedAt = "updatedAt"
         static let upc = "upc"
         static let ean = "ean"
         static let title = "title"
         static let brand = "brand"
+        static let description = "description"
+    }
+    
+    struct BarcodeDigitCounts {
+        static let UPC_A = 12
     }
     
     struct Api {

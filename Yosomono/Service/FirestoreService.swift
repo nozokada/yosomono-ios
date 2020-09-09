@@ -12,11 +12,14 @@ import Firebase
 class FirestoreService {
     
     func uploadProduct(product: Product, completion: @escaping (Bool, Error?) -> ()) {
-        Firestore.firestore().collection(Constants.CollectionNames.products).document(product.upc).setData([
+        Firestore.firestore().collection(Constants.CollectionNames.products).document().setData([
             Constants.FieldNames.ean: product.ean,
             Constants.FieldNames.upc: product.upc,
             Constants.FieldNames.title: product.title,
             Constants.FieldNames.brand: product.brand,
+            Constants.FieldNames.description: product.description,
+            Constants.FieldNames.createdAt: FieldValue.serverTimestamp(),
+            Constants.FieldNames.updatedAt: FieldValue.serverTimestamp(),
         ]) { error in
             if let error = error {
                 #if DEBUG

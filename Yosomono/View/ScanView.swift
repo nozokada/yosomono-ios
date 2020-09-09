@@ -45,6 +45,8 @@ struct ScanView: View {
             self.foundProducts = products
             if let product = products.first {
                 self.product = product
+            } else {
+                self.product = Product(code: code)
             }
             self.isPresented = false
         }

@@ -15,7 +15,6 @@ struct ItemAddView: View {
     
     @State var product: Product = Product()
     @State var productImages = [UIImage]()
-    @State var comment = ""
     @State var selectedRetailerNames = Set<String>()
     @State var isPresentingScannerView = true
     @State var isPresentingRetailersSelectView = false
@@ -63,7 +62,7 @@ struct ItemAddView: View {
                     RemovableTagListView(tags: $selectedRetailerNames)
                 }
                 Divider()
-                LargeTextField(placeholder: "コメント", text: $comment)
+                LargeTextField(placeholder: "コメント", text: $product.description)
                 
                 Button(action: submit) {
                     ButtonContentView(title: "投稿")
@@ -75,7 +74,13 @@ struct ItemAddView: View {
     }
     
     func submit() {
-        print("submit")
+        FirestoreService().uploadProduct(product: product) { success, error in
+            if let error = error {
+                print("Error uploading product \(error.localizedDescription)")
+            } else {
+                isPresented = false
+            }
+        }
     }
 }
 

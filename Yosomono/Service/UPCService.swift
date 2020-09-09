@@ -16,7 +16,7 @@ class UPCService {
         #if DEBUG
         print("Looking up product with code \(code)")
         #endif
-        AF.request(requestUrl).responseJSON {response in
+        AF.request(requestUrl).responseJSON { response in
             completion(self.handleLookupResponse(response))
         }
     }
