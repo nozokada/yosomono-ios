@@ -24,9 +24,9 @@ struct ItemAddView: View {
             HStack {
                 Button(action: {
                     self.isPresented.toggle()
-                }) {
+                }, label: {
                     Image(systemName: "xmark")
-                }
+                })
                 Spacer()
             }
             .padding()
@@ -36,9 +36,9 @@ struct ItemAddView: View {
                     LargeTextField(placeholder: "バーコード", text: $product.upc)
                     Button(action: {
                         self.isPresentingScannerView.toggle()
-                    }) {
+                    }, label: {
                         Image(systemName: "barcode.viewfinder")
-                    }
+                    })
                     .padding()
                     .sheet(isPresented: $isPresentingScannerView) {
                         ScanView(isPresented: self.$isPresentingScannerView, product: self.$product)
@@ -52,9 +52,9 @@ struct ItemAddView: View {
                 VStack(alignment: .leading) {
                     Button(action: {
                         self.isPresentingRetailersSelectView.toggle()
-                    }) {
+                    }, label: {
                         ButtonContentView(title: "+ 小売業者を追加", width: 180, height: 40, font: .body)
-                    }
+                    })
                     .sheet(isPresented: $isPresentingRetailersSelectView) {
                         RetailersSelectView(isPresented: self.$isPresentingRetailersSelectView,
                                             selectedRetailerNames: self.$selectedRetailerNames)
@@ -111,11 +111,11 @@ struct SelectedImagesView: View {
             .frame(height: 120)
             Button(action: {
                 self.isPresentingCamera.toggle()
-            }) {
+            }, label: {
                 Text("商品の画像を撮影または選択する（\(images.count)枚選択中）")
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-            }
+            })
             .padding(.bottom)
         }
         .background(colorScheme == .dark

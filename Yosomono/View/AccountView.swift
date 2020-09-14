@@ -13,12 +13,10 @@ struct AccountView: View {
     @EnvironmentObject var authenticationService: AuthenticationService
 
     var body: some View {
-        Group {
-            if authenticationService.currentUser != nil {
-                ProfileView()
-            } else {
-                LoginView()
-            }
+        if authenticationService.currentUser != nil {
+            ProfileView()
+        } else {
+            LoginView()
         }
     }
 }

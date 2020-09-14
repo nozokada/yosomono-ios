@@ -20,9 +20,9 @@ struct RetailersSelectView: View {
             HStack {
                 Button(action: {
                     self.isPresented.toggle()
-                }) {
+                }, label: {
                     Image(systemName: "xmark")
-                }
+                })
                 Spacer()
             }
             LargeTextField(placeholder: "小売業者を検索", text: $retailerName)

@@ -203,8 +203,6 @@ public struct CodeScanner: UIViewControllerRepresentable {
             if (captureSession?.isRunning == true) {
                 captureSession.stopRunning()
             }
-
-            NotificationCenter.default.removeObserver(self)
         }
 
         override public var prefersStatusBarHidden: Bool {
