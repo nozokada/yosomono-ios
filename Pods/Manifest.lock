@@ -305,6 +305,7 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.10)
+  - SwiftLint (0.40.2)
   - TagListView (1.4.0)
 
 DEPENDENCIES:
@@ -313,6 +314,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - ImagePicker
+  - SwiftLint
   - TagListView
 
 SPEC REPOS:
@@ -335,6 +337,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SwiftLint
     - TagListView
 
 SPEC CHECKSUMS:
@@ -356,8 +359,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  SwiftLint: 1216c910d27c2633ade33b4f071bb6b930982e62
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
 
-PODFILE CHECKSUM: aecb22eb87bf9efc8191531dc1914922f9c170c5
+PODFILE CHECKSUM: 8c104f22c5cd006a452317ff8549d35c60e62d59
 
 COCOAPODS: 1.9.3

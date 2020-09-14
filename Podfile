@@ -6,6 +6,7 @@ target 'Yosomono' do
   use_frameworks!
 
   # Pods for Yosomono
+  pod 'SwiftLint'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Alamofire'
