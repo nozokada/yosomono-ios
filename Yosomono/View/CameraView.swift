@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct CameraView: View {
-    
+
     @Binding var images: [UIImage]
     @Binding var isPresented: Bool
-    
+
     var body: some View {
         ImagePicker(images: $images, isPresented: $isPresented)
     }

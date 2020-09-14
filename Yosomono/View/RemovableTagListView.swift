@@ -10,13 +10,13 @@ import SwiftUI
 import TagListView
 
 struct RemovableTagListView: UIViewRepresentable {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     @Binding var tags: Set<String>
-    
+
     var fontSize: CGFloat = 16
-    
+
     func makeUIView(context: Context) -> TagListView {
         let tagListView = TagListView()
         tagListView.enableRemoveButton = true
@@ -24,16 +24,16 @@ struct RemovableTagListView: UIViewRepresentable {
         tagListView.delegate = context.coordinator
         return tagListView
     }
-    
+
     func updateUIView(_ view: TagListView, context: Context) {
         view.removeAllTags()
         view.addTags(Array(tags).sorted())
     }
-    
+
     func makeCoordinator() -> RemovableTagListViewCoordinator {
         return RemovableTagListViewCoordinator(parent: self)
     }
-    
+
     fileprivate func initView(view: TagListView) {
         view.textFont = UIFont.systemFont(ofSize: fontSize)
         view.textColor = .black
@@ -50,13 +50,13 @@ struct RemovableTagListView: UIViewRepresentable {
 }
 
 class RemovableTagListViewCoordinator: TagListViewDelegate {
-    
+
     var parent: RemovableTagListView
-    
+
     init(parent: RemovableTagListView) {
         self.parent = parent
     }
-    
+
     func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
         sender.removeTagView(tagView)
         parent.tags.remove(title)

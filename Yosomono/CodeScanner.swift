@@ -49,8 +49,8 @@ public struct CodeScanner: UIViewControllerRepresentable {
     }
 
     #if targetEnvironment(simulator)
-    public class ScannerViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-        var delegate: ScannerCoordinator?
+    public class ScannerViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+        weak var delegate: ScannerCoordinator?
         override public func loadView() {
             view = UIView()
             view.isUserInteractionEnabled = true
@@ -93,13 +93,13 @@ public struct CodeScanner: UIViewControllerRepresentable {
             delegate?.found(code: simulatedData)
         }
 
-        @objc func openGallery(_ sender: UIButton){
+        @objc func openGallery(_ sender: UIButton) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             self.present(imagePicker, animated: true, completion: nil)
         }
 
-        public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let qrcodeImg = info[.originalImage] as? UIImage {
                 let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])!
                 let ciImage:CIImage=CIImage(image:qrcodeImg)!
@@ -112,11 +112,10 @@ public struct CodeScanner: UIViewControllerRepresentable {
 
                 if qrCodeLink=="" {
                     delegate?.didFail(reason: .badOutput)
-                }else{
+                } else {
                     delegate?.found(code: qrCodeLink)
                 }
-            }
-            else{
+            } else {
                 print("Something went wrong")
             }
             self.dismiss(animated: true, completion: nil)
@@ -126,11 +125,10 @@ public struct CodeScanner: UIViewControllerRepresentable {
     public class ScannerViewController: UIViewController {
         var captureSession: AVCaptureSession!
         var previewLayer: AVCaptureVideoPreviewLayer!
-        var delegate: ScannerCoordinator?
+        weak var delegate: ScannerCoordinator?
 
         override public func viewDidLoad() {
             super.viewDidLoad()
-
 
             NotificationCenter.default.addObserver(self,
                                                    selector: #selector(updateOrientation),
@@ -246,7 +244,7 @@ public struct CodeScanner: UIViewControllerRepresentable {
 
 struct CodeScannerView_Previews: PreviewProvider {
     static var previews: some View {
-        CodeScanner(codeTypes: [.qr]) { result in
+        CodeScanner(codeTypes: [.qr]) { _ in
             // do nothing
         }
     }

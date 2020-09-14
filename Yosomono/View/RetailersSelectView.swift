@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct RetailersSelectView: View {
-    
+
     @Binding var isPresented: Bool
     @Binding var selectedRetailerNames: Set<String>
-    
+
     @State var retailerName = ""
-    
+
     var body: some View {
         VStack(spacing: 20) {
             HStack {

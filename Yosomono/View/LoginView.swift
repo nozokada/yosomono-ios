@@ -9,21 +9,21 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+
     @State var email: String = ""
     @State var password: String = ""
     @State var message = ""
-    
+
     @EnvironmentObject var authenticationService: AuthenticationService
-    
+
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 LargeTextField(placeholder: "Eメールアドレス", text: $email)
                 LargeSecureField(placeholder: "パスワード", text: $password)
-                
+
                 Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
-                
+
                 Button(action: login) {
                     ButtonContentView(title: "ログイン")
                 }
@@ -36,7 +36,7 @@ struct LoginView: View {
             .padding()
         }
     }
-    
+
     func login() {
         authenticationService.signIn(email: email, password: password) { success, message in
             if !success, let message = message {

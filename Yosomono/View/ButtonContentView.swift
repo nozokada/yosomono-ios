@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct ButtonContentView: View {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     var title: String
     var width: CGFloat = 220
     var height: CGFloat = 60
     var font: Font = .headline
-    
+
     var body: some View {
         Text(title)
             .font(font)

@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 class UPCService {
-    
-    func lookup(code: String, completion: @escaping ([Product]) -> ()) {
-        let requestUrl = "\(Constants.Api.upcitemdb)/lookup?upc=\(code)"
+
+    func lookup(code: String, completion: @escaping ([Product]) -> Void) {
+        let requestUrl = "\(Constants.ApiUrls.upcitemdb)/lookup?upc=\(code)"
         #if DEBUG
         print("Looking up product with code \(code)")
         #endif
@@ -20,7 +20,7 @@ class UPCService {
             completion(self.handleLookupResponse(response))
         }
     }
-    
+
     fileprivate func handleLookupResponse(_ response: AFDataResponse<Any>) -> [Product] {
         var products = [Product]()
         switch response.result {
@@ -37,7 +37,7 @@ class UPCService {
                     products.append(product)
                 }
             }
-        case .failure( _):
+        case .failure:
             #if DEBUG
             print("Failed to look up product", response)
             #endif

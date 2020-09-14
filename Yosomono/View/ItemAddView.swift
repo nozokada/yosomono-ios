@@ -12,13 +12,13 @@ struct ItemAddView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @Binding var isPresented: Bool
-    
+
     @State var product: Product = Product()
     @State var productImages = [UIImage]()
     @State var selectedRetailerNames = Set<String>()
     @State var isPresentingScannerView = true
     @State var isPresentingRetailersSelectView = false
-    
+
     var body: some View {
         ScrollView {
             HStack {
@@ -30,7 +30,7 @@ struct ItemAddView: View {
                 Spacer()
             }
             .padding()
-            
+
             VStack(spacing: 10) {
                 HStack {
                     LargeTextField(placeholder: "バーコード", text: $product.upc)
@@ -63,7 +63,7 @@ struct ItemAddView: View {
                 }
                 Divider()
                 LargeTextField(placeholder: "コメント", text: $product.description)
-                
+
                 Button(action: submit) {
                     ButtonContentView(title: "投稿")
                 }
@@ -72,9 +72,9 @@ struct ItemAddView: View {
             .padding()
         }
     }
-    
+
     func submit() {
-        FirestoreService().uploadProduct(product: product) { success, error in
+        FirestoreService().uploadProduct(product: product) { _, error in
             if let error = error {
                 print("Error uploading product \(error.localizedDescription)")
             } else {
@@ -85,17 +85,17 @@ struct ItemAddView: View {
 }
 
 struct SelectedImagesView: View {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     @Binding var images: [UIImage]
-    
+
     @State var isPresentingCamera = false
-    
+
     let rows = [
         GridItem(.fixed(100))
     ]
-    
+
     var body: some View {
         VStack {
             ScrollView(.horizontal) {
@@ -122,7 +122,7 @@ struct SelectedImagesView: View {
                         ? Constants.Colors.textFieldBackgroundDark
                         : Constants.Colors.textFieldBackground)
         .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-        
+
         .fullScreenCover(isPresented: $isPresentingCamera) {
             CameraView(images: self.$images, isPresented: self.$isPresentingCamera)
         }

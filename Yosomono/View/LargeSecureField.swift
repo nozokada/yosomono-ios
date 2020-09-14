@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct LargeSecureField: View {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     var placeholder: String = ""
-    
+
     @Binding var text: String
-    
+
     var body: some View {
         SecureField(placeholder, text: $text)
             .padding()

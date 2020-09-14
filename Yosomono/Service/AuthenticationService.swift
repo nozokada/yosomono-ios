@@ -10,14 +10,14 @@ import Foundation
 import Firebase
 
 class AuthenticationService: ObservableObject {
-    
+
     @Published var currentUser: User?
-    
+
     init() {
         currentUser = Auth.auth().currentUser
     }
-    
-    func createUser(email: String, password: String, username: String, completion: @escaping (Bool, String?) -> ()) {
+
+    func createUser(email: String, password: String, username: String, completion: @escaping (Bool, String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             guard let user = authResult?.user else {
                 #if DEBUG
@@ -39,9 +39,9 @@ class AuthenticationService: ObservableObject {
             }
         }
     }
-    
-    func signIn(email: String, password: String, completion: @escaping (Bool, String?) -> ()) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+
+    func signIn(email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { _, error in
             if let error = error {
                 #if DEBUG
                 print("Failed to sign in")
@@ -56,19 +56,18 @@ class AuthenticationService: ObservableObject {
             }
         }
     }
-    
-    func signOut(completion: ((Bool, String?) -> ())? = nil) {
+
+    func signOut(completion: ((Bool, String?) -> Void)? = nil) {
         do {
             try Auth.auth().signOut()
             self.currentUser = nil
             completion?(true, nil)
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             completion?(false, getAuthErrorMessage(error))
         }
     }
-    
-    func sendPasswordReset(to email: String, completion: @escaping (Bool, String?) -> ()) {
+
+    func sendPasswordReset(to email: String, completion: @escaping (Bool, String?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 #if DEBUG
@@ -83,11 +82,11 @@ class AuthenticationService: ObservableObject {
             }
         }
     }
-    
-    fileprivate func changeDisplayName(user: User, username: String, completion: (() -> ())? = nil) {
+
+    fileprivate func changeDisplayName(user: User, username: String, completion: (() -> Void)? = nil) {
         let changeRequest = user.createProfileChangeRequest()
         changeRequest.displayName = username
-        changeRequest.commitChanges() { error in
+        changeRequest.commitChanges { error in
             if let error = error {
                 #if DEBUG
                 print("Failed to add display name \(username): \(error.localizedDescription)")
@@ -99,8 +98,8 @@ class AuthenticationService: ObservableObject {
             completion?()
         }
     }
-    
-    fileprivate func createUserData(user: User, completion: (() -> ())? = nil) {
+
+    fileprivate func createUserData(user: User, completion: (() -> Void)? = nil) {
         let username = user.displayName ?? user.uid
         Firestore.firestore().collection(Constants.CollectionNames.users).document(user.uid).setData([
             Constants.FieldNames.username : username,
@@ -118,7 +117,7 @@ class AuthenticationService: ObservableObject {
             completion?()
         }
     }
-    
+
     fileprivate func getAuthErrorMessage(_ error: Error) -> String {
         let error = error as NSError
         var message = error.localizedDescription
@@ -128,4 +127,3 @@ class AuthenticationService: ObservableObject {
         return message
     }
 }
-

@@ -10,9 +10,9 @@ import SwiftUI
 import TagListView
 
 struct SelectableTagListView: UIViewRepresentable {
-    
+
     @Binding var selectedTags: Set<String>
-    
+
     var tags: [String]
     var searchTerm = ""
     var fontSize: CGFloat = 16
@@ -23,14 +23,14 @@ struct SelectableTagListView: UIViewRepresentable {
         tagListView.delegate = context.coordinator
         return tagListView
     }
-    
+
     func updateUIView(_ view: TagListView, context: Context) {
         view.removeAllTags()
         if searchTerm.isEmpty {
             return
         }
         let lowercasedSearchTerm = searchTerm.lowercased()
-        tags.forEach() { tag in
+        tags.forEach { tag in
             if tag.lowercased().contains(lowercasedSearchTerm) {
                 let tagView = view.addTag(tag)
                 if selectedTags.contains(tag) {
@@ -39,11 +39,11 @@ struct SelectableTagListView: UIViewRepresentable {
             }
         }
     }
-    
+
     func makeCoordinator() -> SelectableTagListViewCoordinator {
         return SelectableTagListViewCoordinator(parent: self)
     }
-    
+
     fileprivate func initView(view: TagListView) {
         view.textFont = UIFont.systemFont(ofSize: fontSize)
         view.textColor = UIColor(Constants.Colors.themeBlue)
@@ -61,16 +61,16 @@ struct SelectableTagListView: UIViewRepresentable {
 }
 
 class SelectableTagListViewCoordinator: TagListViewDelegate {
-    
+
     var parent: SelectableTagListView
-    
+
     init(parent: SelectableTagListView) {
         self.parent = parent
     }
-    
+
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagView.isSelected = !tagView.isSelected
-        
+
         if tagView.isSelected {
             parent.selectedTags.insert(title)
         } else {

@@ -10,8 +10,8 @@ import Foundation
 import Firebase
 
 class FirestoreService {
-    
-    func uploadProduct(product: Product, completion: @escaping (Bool, Error?) -> ()) {
+
+    func uploadProduct(product: Product, completion: @escaping (Bool, Error?) -> Void) {
         Firestore.firestore().collection(Constants.CollectionNames.products).document().setData([
             Constants.FieldNames.ean: product.ean,
             Constants.FieldNames.upc: product.upc,
@@ -19,7 +19,7 @@ class FirestoreService {
             Constants.FieldNames.brand: product.brand,
             Constants.FieldNames.description: product.description,
             Constants.FieldNames.createdAt: FieldValue.serverTimestamp(),
-            Constants.FieldNames.updatedAt: FieldValue.serverTimestamp(),
+            Constants.FieldNames.updatedAt: FieldValue.serverTimestamp()
         ]) { error in
             if let error = error {
                 #if DEBUG

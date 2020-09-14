@@ -9,18 +9,18 @@
 import Foundation
 
 class Product {
-    
+
     var upc: String
     var ean: String
     var title = ""
     var brand = ""
     var description = ""
-    
+
     init() {
         upc = ""
         ean = ""
     }
-    
+
     init(code: String) {
         if code.count == Constants.BarcodeDigitCounts.UPC_A {
             upc = code
@@ -30,7 +30,7 @@ class Product {
             ean = code
         }
     }
-    
+
     init?(json: [String: Any]) {
         guard let ean = json["upc"] as? String,
             let upc = json["ean"] as? String,

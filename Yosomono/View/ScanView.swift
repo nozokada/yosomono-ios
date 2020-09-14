@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct ScanView: View {
-    
+
     @Binding var isPresented: Bool
     @Binding var product: Product
-    
+
     @State var foundProducts: [Product] = []
-    
+
     var body: some View {
         ZStack {
             CodeScanner(
@@ -25,7 +25,7 @@ struct ScanView: View {
                     }
                 }
             )
-            VStack() {
+            VStack {
                 Text("商品のバーコードをスキャンしてください")
                     .font(.headline)
                     .foregroundColor(Constants.Colors.themeBlue)
@@ -39,7 +39,7 @@ struct ScanView: View {
             }
         }
     }
-    
+
     func lookupProduct(_ code: String) {
         UPCService().lookup(code: code) { products in
             self.foundProducts = products

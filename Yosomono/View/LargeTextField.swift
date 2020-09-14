@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct LargeTextField: View {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     var placeholder: String = ""
-    
+
     @Binding var text: String
-    
+
     var body: some View {
         TextField(placeholder, text: $text)
             .padding()

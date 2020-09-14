@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+
     @EnvironmentObject var authenticationService: AuthenticationService
-    
+
     var body: some View {
         VStack {
             Text("こんにちは、\(authenticationService.currentUser?.displayName ?? "名無し")さん")
@@ -22,7 +22,7 @@ struct ProfileView: View {
             }
         }.padding()
     }
-    
+
     func logout() {
         authenticationService.signOut()
     }
