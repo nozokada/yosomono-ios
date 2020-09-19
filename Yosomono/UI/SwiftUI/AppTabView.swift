@@ -1,5 +1,5 @@
 //
-//  AppRootView.swift
+//  AppTabView.swift
 //  Yosomono
 //
 //  Created by Nozomi Okada on 8/17/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct AppRootView: View {
+struct AppTabView: View {
 
     @State private var selection = 0
     @State private var isPresentingAddSheet = false
@@ -70,6 +70,6 @@ struct ItemAddButton: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppRootView().environmentObject(AuthenticationService())
+        AppTabView().environmentObject(AuthenticationService())
     }
 }
