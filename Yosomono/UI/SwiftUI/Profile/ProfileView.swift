@@ -10,11 +10,19 @@ import SwiftUI
 
 struct ProfileView: View {
 
-    @EnvironmentObject var authenticationService: AuthenticationService
+    var viewModel: ProfileViewModel
+    @ObservedObject var state: ProfileViewModel.State
+
+    @EnvironmentObject var authState: AuthenticationState
+
+    init() {
+        viewModel = ProfileViewModel()
+        state = viewModel.state
+    }
 
     var body: some View {
         VStack {
-            Text("こんにちは、\(authenticationService.currentUser?.displayName ?? "名無し")さん")
+            Text("こんにちは、\(authState.loggedInUser?.displayName ?? "名無し")さん")
                 .font(.headline)
                 .padding()
             Button(action: logout) {
@@ -24,12 +32,12 @@ struct ProfileView: View {
     }
 
     func logout() {
-        authenticationService.signOut()
+        authState.signOut()
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject(AuthenticationService())
+        ProfileView()
     }
 }

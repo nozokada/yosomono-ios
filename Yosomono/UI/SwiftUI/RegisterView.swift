@@ -14,9 +14,8 @@ struct RegisterView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var passwordAgain: String = ""
-    @State var message = ""
 
-    @EnvironmentObject var authenticationService: AuthenticationService
+    @EnvironmentObject var authState: AuthenticationState
 
     var body: some View {
         VStack(spacing: 20) {
@@ -25,7 +24,10 @@ struct RegisterView: View {
             LargeSecureField(placeholder: "パスワード", text: $password)
             LargeSecureField(placeholder: "パスワードをもう一度入力", text: $passwordAgain)
 
-            Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
+            Text(authState.error?.localizedDescription ?? "")
+                .foregroundColor(.red)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             Button(action: register) {
                 ButtonContentView(title: "登録")
@@ -35,16 +37,12 @@ struct RegisterView: View {
     }
 
     func register() {
-        authenticationService.createUser(email: email, password: password, username: username) { success, message in
-            if !success, let message = message {
-                self.message = message
-            }
-        }
+        authState.signUp(email: email, password: password, username: username)
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView().environmentObject(AuthenticationService())
+        RegisterView()
     }
 }

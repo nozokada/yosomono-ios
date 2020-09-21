@@ -14,7 +14,7 @@ struct LoginView: View {
     @State var password: String = ""
     @State var message = ""
 
-    @EnvironmentObject var authenticationService: AuthenticationService
+    @EnvironmentObject var authState: AuthenticationState
 
     var body: some View {
         NavigationView {
@@ -22,9 +22,12 @@ struct LoginView: View {
                 LargeTextField(placeholder: "Eメールアドレス", text: $email)
                 LargeSecureField(placeholder: "パスワード", text: $password)
 
-                Text(message).foregroundColor(.red).lineLimit(1).minimumScaleFactor(0.5)
+                Text(authState.error?.localizedDescription ?? "")
+                    .foregroundColor(.red)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
 
-                Button(action: login) {
+                Button(action: signIn) {
                     ButtonContentView(title: "ログイン")
                 }
                 NavigationLink(destination: RegisterView()) {
@@ -37,17 +40,13 @@ struct LoginView: View {
         }
     }
 
-    func login() {
-        authenticationService.signIn(email: email, password: password) { success, message in
-            if !success, let message = message {
-                self.message = message
-            }
-        }
+    func signIn() {
+        authState.signIn(with: .signInWithEmailAndPassword(email, password))
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(AuthenticationService())
+        LoginView()
     }
 }

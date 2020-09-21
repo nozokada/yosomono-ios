@@ -10,10 +10,10 @@ import SwiftUI
 
 struct AccountView: View {
 
-    @EnvironmentObject var authenticationService: AuthenticationService
+    @EnvironmentObject var authState: AuthenticationState
 
     var body: some View {
-        if authenticationService.currentUser != nil {
+        if authState.loggedInUser != nil {
             ProfileView()
         } else {
             LoginView()
@@ -23,6 +23,6 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView().environmentObject(AuthenticationService())
+        AccountView()
     }
 }
