@@ -20,6 +20,10 @@ class AuthenticationState: ObservableObject {
     private let auth = Auth.auth()
     private let userCollection = Firestore.firestore().collection(Constants.CollectionNames.users)
 
+    init() {
+        loggedInUser = auth.currentUser
+    }
+
     func signIn(with signInOption: SignInOption) {
         isAuthenticating = true
         error = nil
