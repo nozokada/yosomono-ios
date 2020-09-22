@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Yosomono
+
+  Created by Nozomi Okada on 9/21/20.
+  Copyright © 2020 Nozomi Okada. All rights reserved.
+*/
+
+"emailAlreadyInUse" = "このメールアドレスはすでに使用されています";
+"userDisabled" = "サービスの利用が停止されています";
+"invalidEmail" = "メールアドレスの形式が正しくありません";
+"wrongPassword" = "メールアドレスまたはパスワードが違います";
+"userNotFound" = "メールアドレスまたはパスワードが違います";
+"networkError" = "ネットワーク接続に失敗しました";
+"weakPassword" = "パスワードは6文字以上にしてください";
+"internalError" = "エラーが発生しました。しばらく時間をおいて再度お試しください";
+"UnknownError" = "エラーが発生しました";

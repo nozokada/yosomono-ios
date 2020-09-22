@@ -10,26 +10,26 @@ import Foundation
 import FirebaseAuth
 
 extension AuthErrorCode {
-    func getDescription(error: Error) -> String {
+    func getError() -> AuthError {
         switch self {
         case .emailAlreadyInUse:
-            return "このメールアドレスはすでに使用されています"
+            return AuthError.emailAlreadyInUse
         case .userDisabled:
-             return "サービスの利用が停止されています"
+            return AuthError.userDisabled
         case .invalidEmail:
-             return "メールアドレスの形式が正しくありません"
+            return AuthError.invalidEmail
         case .wrongPassword:
-             return "メールアドレスまたはパスワードが違います"
+            return AuthError.wrongPassword
         case .userNotFound:
-             return "メールアドレスまたはパスワードが違います"
+            return AuthError.userNotFound
         case .networkError:
-             return "ネットワーク接続に失敗しました"
+            return AuthError.networkError
         case .weakPassword:
-             return "パスワードは6文字以上にしてください"
+            return AuthError.weakPassword
         case .internalError:
-             return "エラーが発生しました。しばらく時間をおいて再度お試しください"
+            return AuthError.internalError
         default:
-            return error.localizedDescription
+            return AuthError.unknownError
         }
     }
 }

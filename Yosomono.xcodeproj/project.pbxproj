@@ -41,6 +41,8 @@
 		CFC3A4AC2515DBDB009601D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3A4AB2515DBDB009601D8 /* AppDelegate.swift */; };
 		CFC3A4B82515DEB5009601D8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3A4B72515DEB5009601D8 /* ProfileViewModel.swift */; };
 		CFC3A4C025172587009601D8 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3A4BF25172587009601D8 /* AuthenticationState.swift */; };
+		CFC3A4D62519C7E7009601D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFC3A4D82519C7E7009601D8 /* Localizable.strings */; };
+		CFC3A4DF2519CDDE009601D8 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3A4DE2519CDDE009601D8 /* AuthError.swift */; };
 		CFCB95D524FC93D800B08BA4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB95D424FC93D800B08BA4 /* CameraView.swift */; };
 		CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,9 @@
 		CFC3A4AB2515DBDB009601D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC3A4B72515DEB5009601D8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CFC3A4BF25172587009601D8 /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		CFC3A4D72519C7E7009601D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CFC3A4DD2519C826009601D8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CFC3A4DE2519CDDE009601D8 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		CFCB95D424FC93D800B08BA4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		CFCB95D624FC941B00B08BA4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBA1B9A8303B55A85C1A6BC6 /* Pods-YosomonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YosomonoTests.release.xcconfig"; path = "Target Support Files/Pods-YosomonoTests/Pods-YosomonoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,11 +187,13 @@
 				CF927C5E24EC816900EB51F8 /* AppExtensions.swift */,
 				CF927C5A24EB9A4D00EB51F8 /* Constants.swift */,
 				CFC3A4BF25172587009601D8 /* AuthenticationState.swift */,
+				CFC3A4DE2519CDDE009601D8 /* AuthError.swift */,
 				CF927C2824EB897E00EB51F8 /* Assets.xcassets */,
 				CF927C2D24EB897E00EB51F8 /* LaunchScreen.storyboard */,
 				CF927C3024EB897E00EB51F8 /* Info.plist */,
 				CF927C5224EB8FDC00EB51F8 /* GoogleService-Info.plist */,
 				CFC3A4A32515D7EC009601D8 /* ViewModel.swift */,
+				CFC3A4D82519C7E7009601D8 /* Localizable.strings */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -401,6 +408,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = CF927C1624EB897D00EB51F8;
 			packageReferences = (
@@ -421,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC3A4D62519C7E7009601D8 /* Localizable.strings in Resources */,
 				CF927C2F24EB897E00EB51F8 /* LaunchScreen.storyboard in Resources */,
 				CF927C5324EB8FDC00EB51F8 /* GoogleService-Info.plist in Resources */,
 				CF927C2C24EB897E00EB51F8 /* Preview Assets.xcassets in Resources */,
@@ -575,6 +584,7 @@
 				CFC3A4B82515DEB5009601D8 /* ProfileViewModel.swift in Sources */,
 				CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */,
 				CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */,
+				CFC3A4DF2519CDDE009601D8 /* AuthError.swift in Sources */,
 				CFCB95D524FC93D800B08BA4 /* CameraView.swift in Sources */,
 				CFC3A4A42515D7EC009601D8 /* ViewModel.swift in Sources */,
 				CFBBEA8E2502048A00D6F4F6 /* FirestoreService.swift in Sources */,
@@ -639,6 +649,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CFC3A4D82519C7E7009601D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFC3A4D72519C7E7009601D8 /* en */,
+				CFC3A4DD2519C826009601D8 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -646,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -707,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
