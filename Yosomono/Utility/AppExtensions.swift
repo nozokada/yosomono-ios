@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 
 extension AuthErrorCode {
-    func getError() -> AuthError {
+    var authError: AuthError {
         switch self {
         case .emailAlreadyInUse:
             return AuthError.emailAlreadyInUse

@@ -40,8 +40,8 @@ class AuthenticationState: ObservableObject {
                 #if DEBUG
                 print("Failed to create user with email \(email)")
                 #endif
-                if let error = as NSError? {
-                    self.error = AuthErrorCode(rawValue: error.code)?.getError() as NSError?
+                if let error = error {
+                    self.error = self.getAuthNSError(error: error as NSError)
                 }
                 self.isAuthenticating = false
                 return
@@ -59,7 +59,7 @@ class AuthenticationState: ObservableObject {
             try Auth.auth().signOut()
             loggedInUser = nil
         } catch let error as NSError {
-            self.error = AuthErrorCode(rawValue: error.code)?.getError() as NSError?
+            self.error = self.getAuthNSError(error: error)
         }
     }
 
@@ -106,11 +106,11 @@ extension AuthenticationState {
 extension AuthenticationState {
     private func handleSignInWith(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { _, error in
-            if let error = error as NSError? {
+            if let error = error {
                 #if DEBUG
                 print("Failed to sign in")
                 #endif
-                self.error = AuthErrorCode(rawValue: error.code)?.getError() as NSError?
+                self.error = self.getAuthNSError(error: error as NSError)
             } else {
                 #if DEBUG
                 print("Successfully signed in")
@@ -119,5 +119,9 @@ extension AuthenticationState {
             }
             self.isAuthenticating = false
         }
+    }
+
+    private func getAuthNSError(error: NSError) -> NSError? {
+        return AuthErrorCode(rawValue: error.code)?.authError as NSError?
     }
 }
