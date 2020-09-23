@@ -14,4 +14,4 @@
 "networkError" = "Network error occurred";
 "weakPassword" = "Password must be at least 6 characters";
 "internalError" = "Internal error occurred";
-"UnknownError" = "Error occurred";
+"unknownError" = "Error occurred";
