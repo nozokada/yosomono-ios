@@ -33,7 +33,7 @@ struct AppTabView: View {
                 }
                 .tag(2)
 
-                AccountView()
+                ProfileView()
                 .tabItem {
                     Image(systemName: "person.fill")
                 }
@@ -70,6 +70,6 @@ struct ItemAddButton: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppTabView()
+        AppTabView().environmentObject(AuthenticationState())
     }
 }

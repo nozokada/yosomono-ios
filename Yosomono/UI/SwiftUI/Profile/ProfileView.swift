@@ -21,14 +21,18 @@ struct ProfileView: View {
     }
 
     var body: some View {
-        VStack {
-            Text("こんにちは、\(authState.loggedInUser?.displayName ?? "名無し")さん")
-                .font(.headline)
-                .padding()
-            Button(action: logout) {
-                ButtonContentView(title: "ログアウト")
-            }
-        }.padding()
+        if authState.loggedInUser != nil {
+            VStack {
+                Text("こんにちは、\(authState.loggedInUser?.displayName ?? "名無し")さん")
+                    .font(.headline)
+                    .padding()
+                Button(action: logout) {
+                    ButtonContentView(title: "ログアウト")
+                }
+            }.padding()
+        } else {
+            LoginView()
+        }
     }
 
     func logout() {
@@ -38,6 +42,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView().environmentObject(AuthenticationState())
     }
 }
