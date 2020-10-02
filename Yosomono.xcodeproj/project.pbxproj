@@ -30,7 +30,6 @@
 		CF927C5F24EC816900EB51F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C5E24EC816900EB51F8 /* AppExtensions.swift */; };
 		CF927C6124ED9D0300EB51F8 /* ButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6024ED9D0300EB51F8 /* ButtonContentView.swift */; };
 		CF927C6324EDD58000EB51F8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6224EDD58000EB51F8 /* RegisterView.swift */; };
-		CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6424EDE32A00EB51F8 /* AccountView.swift */; };
 		CF927C6A24EF43D100EB51F8 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6924EF43D100EB51F8 /* ScanView.swift */; };
 		CF927C6C24EF44ED00EB51F8 /* ItemAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C6B24EF44ED00EB51F8 /* ItemAddView.swift */; };
 		CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF927C7024F0981600EB51F8 /* CodeScanner.swift */; };
@@ -98,7 +97,6 @@
 		CF927C5E24EC816900EB51F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		CF927C6024ED9D0300EB51F8 /* ButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentView.swift; sourceTree = "<group>"; };
 		CF927C6224EDD58000EB51F8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		CF927C6424EDE32A00EB51F8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CF927C6924EF43D100EB51F8 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		CF927C6B24EF44ED00EB51F8 /* ItemAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAddView.swift; sourceTree = "<group>"; };
 		CF927C7024F0981600EB51F8 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
@@ -313,7 +311,6 @@
 		CFC3A4B62515DDDA009601D8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CF927C6424EDE32A00EB51F8 /* AccountView.swift */,
 				CF927C5424EB998F00EB51F8 /* ProfileView.swift */,
 				CFC3A4B72515DEB5009601D8 /* ProfileViewModel.swift */,
 				CF927C5624EB99DA00EB51F8 /* LoginView.swift */,
@@ -588,7 +585,6 @@
 			files = (
 				CF75B4C1250400EB005745F4 /* RemovableTagListView.swift in Sources */,
 				CF927C7124F0981600EB51F8 /* CodeScanner.swift in Sources */,
-				CF927C6524EDE32B00EB51F8 /* AccountView.swift in Sources */,
 				CFC3A4B82515DEB5009601D8 /* ProfileViewModel.swift in Sources */,
 				CF037E0B24F3371200BAB8AE /* LargeSecureField.swift in Sources */,
 				CFCB95D724FC941B00B08BA4 /* ImagePicker.swift in Sources */,
