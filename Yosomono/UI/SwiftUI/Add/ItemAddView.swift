@@ -9,72 +9,104 @@
 import SwiftUI
 
 struct ItemAddView: View {
-    @Environment(\.colorScheme) var colorScheme
-
     @Binding var isPresented: Bool
 
-    @State var product: Product = Product()
-    @State var productImages = [UIImage]()
-    @State var selectedRetailerNames = Set<String>()
-    @State var isPresentingScannerView = true
-    @State var isPresentingRetailersSelectView = false
+    var viewModel: ItemAddViewModel
+    @ObservedObject var state: ItemAddViewModel.State
+
+    init(isPresented: Binding<Bool>) {
+        _isPresented = isPresented
+
+        viewModel = ItemAddViewModel()
+        state = viewModel.state
+    }
 
     var body: some View {
         ScrollView {
-            HStack {
-                Button(action: {
-                    self.isPresented.toggle()
-                }, label: {
-                    Image(systemName: "xmark")
-                })
-                Spacer()
-            }
-            .padding()
+            closeButton()
+                .padding()
 
             VStack(spacing: 10) {
-                HStack {
-                    LargeTextField(placeholder: "バーコード", text: $product.upc)
-                    Button(action: {
-                        self.isPresentingScannerView.toggle()
-                    }, label: {
-                        Image(systemName: "barcode.viewfinder")
-                    })
-                    .padding()
-                    .sheet(isPresented: $isPresentingScannerView) {
-                        ScanView(isPresented: self.$isPresentingScannerView, product: self.$product)
-                    }
-                }
+                barcodeReaderTextField()
                 Divider()
-                LargeTextField(placeholder: "商品名", text: $product.title)
-                Divider()
-                SelectedImagesView(images: $productImages)
-                Divider()
-                VStack(alignment: .leading) {
-                    Button(action: {
-                        self.isPresentingRetailersSelectView.toggle()
-                    }, label: {
-                        ButtonContentView(title: "+ 小売業者を追加", width: 180, height: 40, font: .body)
-                    })
-                    .sheet(isPresented: $isPresentingRetailersSelectView) {
-                        RetailersSelectView(isPresented: self.$isPresentingRetailersSelectView,
-                                            selectedRetailerNames: self.$selectedRetailerNames)
-                    }
-                    RemovableTagListView(tags: $selectedRetailerNames)
-                }
-                Divider()
-                LargeTextField(placeholder: "コメント", text: $product.description)
 
-                Button(action: submit) {
-                    ButtonContentView(title: "投稿")
-                }
-                .padding()
+                productNameTextField()
+                Divider()
+
+                SelectedImagesView(images: $state.productImages)
+                Divider()
+
+                retailersSelector()
+                Divider()
+
+                commentTextField()
+
+                postButton()
+                    .padding()
             }
             .padding()
         }
     }
+}
+
+extension ItemAddView {
+    func closeButton() -> some View {
+        HStack {
+            Button(action: {
+                isPresented.toggle()
+            }, label: {
+                Image(systemName: "xmark")
+            })
+            Spacer()
+        }
+    }
+
+    func barcodeReaderTextField() -> some View {
+        HStack {
+            LargeTextField(placeholder: "バーコード", text: $state.product.upc)
+            Button(action: {
+                state.isPresentingScannerView.toggle()
+            }, label: {
+                Image(systemName: "barcode.viewfinder")
+            })
+            .padding()
+            .sheet(isPresented: $state.isPresentingScannerView) {
+                ScanView(isPresented: $state.isPresentingScannerView, product: $state.product)
+            }
+        }
+    }
+
+    func productNameTextField() -> some View {
+        LargeTextField(placeholder: "商品名", text: $state.product.title)
+    }
+
+    func retailersSelector() -> some View {
+        VStack(alignment: .leading) {
+            Button(action: {
+                state.isPresentingRetailersSelectView.toggle()
+            }, label: {
+                ButtonContentView(title: "+ 小売業者を追加", width: 180, height: 40, font: .body)
+            })
+            .sheet(isPresented: $state.isPresentingRetailersSelectView) {
+                RetailersSelectView(isPresented: $state.isPresentingRetailersSelectView,
+                                    selectedRetailerNames: $state.selectedRetailerNames)
+            }
+            RemovableTagListView(tags: $state.selectedRetailerNames)
+        }
+    }
+
+    func commentTextField() -> some View {
+        LargeTextField(placeholder: "コメント", text: $state.product.description)
+    }
+
+    func postButton() -> some View {
+        Button(action: submit) {
+            ButtonContentView(title: "投稿")
+        }
+    }
 
     func submit() {
-        FirestoreService().uploadProduct(product: product) { _, error in
+        FirestoreService().uploadProduct(product: state.product) { _, error in
             if let error = error {
                 print("Error uploading product \(error.localizedDescription)")
             } else {
@@ -85,7 +117,6 @@ struct ItemAddView: View {
 }
 
 struct SelectedImagesView: View {
-
     @Environment(\.colorScheme) var colorScheme
 
     @Binding var images: [UIImage]
