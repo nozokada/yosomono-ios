@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ItemAddView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @Binding var isPresented: Bool
 
     var viewModel: ItemAddViewModel
@@ -16,7 +18,6 @@ struct ItemAddView: View {
 
     init(isPresented: Binding<Bool>) {
         _isPresented = isPresented
-
         viewModel = ItemAddViewModel()
         state = viewModel.state
     }
@@ -33,7 +34,7 @@ struct ItemAddView: View {
                 productNameTextField()
                 Divider()
 
-                SelectedImagesView(images: $state.productImages)
+                imageSelector()
                 Divider()
 
                 retailersSelector()
@@ -80,6 +81,42 @@ extension ItemAddView {
         LargeTextField(placeholder: "商品名", text: $state.product.title)
     }
 
+    func imageSelector() -> some View {
+        let rows = [
+            GridItem(.fixed(100))
+        ]
+
+        return VStack {
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: rows, spacing: 20) {
+                    ForEach(state.productImages, id: \.self) { item in
+                        Image(uiImage: item)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                }
+                .padding()
+            }
+            .frame(height: 120)
+            Button(action: {
+                state.isPresentingCameraView.toggle()
+            }, label: {
+                Text("商品の画像を撮影または選択する（\(state.productImages.count)枚選択中）")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+            })
+            .padding(.bottom)
+        }
+        .background(colorScheme == .dark
+                        ? Constants.Colors.textFieldBackgroundDark
+                        : Constants.Colors.textFieldBackground)
+        .cornerRadius(Constants.Sizes.textFieldCornerRadius)
+
+        .fullScreenCover(isPresented: $state.isPresentingCameraView) {
+            CameraView(images: $state.productImages, isPresented: $state.isPresentingCameraView)
+        }
+    }
+
     func retailersSelector() -> some View {
         VStack(alignment: .leading) {
             Button(action: {
@@ -116,53 +153,8 @@ extension ItemAddView {
     }
 }
 
-struct SelectedImagesView: View {
-    @Environment(\.colorScheme) var colorScheme
-
-    @Binding var images: [UIImage]
-
-    @State var isPresentingCamera = false
-
-    let rows = [
-        GridItem(.fixed(100))
-    ]
-
-    var body: some View {
-        VStack {
-            ScrollView(.horizontal) {
-                LazyHGrid(rows: rows, spacing: 20) {
-                    ForEach(images, id: \.self) { item in
-                        Image(uiImage: item)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    }
-                }
-                .padding()
-            }
-            .frame(height: 120)
-            Button(action: {
-                self.isPresentingCamera.toggle()
-            }, label: {
-                Text("商品の画像を撮影または選択する（\(images.count)枚選択中）")
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
-            })
-            .padding(.bottom)
-        }
-        .background(colorScheme == .dark
-                        ? Constants.Colors.textFieldBackgroundDark
-                        : Constants.Colors.textFieldBackground)
-        .cornerRadius(Constants.Sizes.textFieldCornerRadius)
-
-        .fullScreenCover(isPresented: $isPresentingCamera) {
-            CameraView(images: self.$images, isPresented: self.$isPresentingCamera)
-        }
-    }
-}
-
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
         ItemAddView(isPresented: .constant(true))
-        SelectedImagesView(images: .constant([UIImage(named: "ramen")!]))
     }
 }

@@ -23,6 +23,7 @@ extension ItemAddViewModel {
         @Published var productImages = [UIImage]()
         @Published var selectedRetailerNames = Set<String>()
         @Published var isPresentingScannerView = true
+        @Published var isPresentingCameraView = false
         @Published var isPresentingRetailersSelectView = false
     }
 }
